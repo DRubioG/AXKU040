@@ -1,0 +1,37 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed Jul 13 13:53:08 2022
+| Host         : DESKTOP-C3F5G4E running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'sys_clock'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of sys_clock (xilinx.com:ip:clk_wiz:5.4 (Rev. 3)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed Jul 13 13:53:03 2022
+| Host         : DESKTOP-C3F5G4E running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcku040-ffva1156-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ila_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of ila_0 (xilinx.com:ip:ila:6.2 (Rev. 5)) to Vivado generation flows.
+

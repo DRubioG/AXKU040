@@ -1,0 +1,14 @@
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto fcf5412e46f944f799190a1f26c29dac --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot lp87_test_behav xil_defaultlib.lp87_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "E:/ax/ku040/02_lp873220_pwr_test/02_lp873220_pwr_test/02_lp873220_pwr_test.srcs/sources_1/i2c_com.v" Line 2. Module i2c_com doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.i2c_com
+Compiling module xil_defaultlib.lp87_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot lp87_test_behav

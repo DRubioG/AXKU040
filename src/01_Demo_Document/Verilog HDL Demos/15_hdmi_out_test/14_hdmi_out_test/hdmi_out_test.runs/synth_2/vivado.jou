@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Aug 12 09:57:46 2021
+# Process ID: 28864
+# Current directory: E:/ax/ku040/14_hdmi_out_test/hdmi_out_test.runs/synth_2
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: E:/ax/ku040/14_hdmi_out_test/hdmi_out_test.runs/synth_2/top.vds
+# Journal file: E:/ax/ku040/14_hdmi_out_test/hdmi_out_test.runs/synth_2\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace

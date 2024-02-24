@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Apr 29 15:30:10 2021
+# Process ID: 10316
+# Current directory: E:/XilinxPrj/AXUK40/gt_test_5g/gth_ex/gth_ex.runs/gth_vio_0_synth_1
+# Command line: vivado.exe -log gth_vio_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source gth_vio_0.tcl
+# Log file: E:/XilinxPrj/AXUK40/gt_test_5g/gth_ex/gth_ex.runs/gth_vio_0_synth_1/gth_vio_0.vds
+# Journal file: E:/XilinxPrj/AXUK40/gt_test_5g/gth_ex/gth_ex.runs/gth_vio_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source gth_vio_0.tcl -notrace

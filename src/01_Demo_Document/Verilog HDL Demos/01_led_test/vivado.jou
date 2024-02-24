@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Jul  6 13:18:48 2021
+# Process ID: 19144
+# Current directory: E:/ax/ku040/01_led_test/01_led_test
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6304 E:\ax\ku040\01_led_test\01_led_test\01_led_test.xpr
+# Log file: E:/ax/ku040/01_led_test/01_led_test/vivado.log
+# Journal file: E:/ax/ku040/01_led_test/01_led_test\vivado.jou
+#-----------------------------------------------------------
+start_gui

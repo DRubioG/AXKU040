@@ -1,0 +1,3 @@
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+Warning: [Unisim PLLE3_ADV-10] input CLKIN period (500.000000) and attribute CLKIN_PERIOD (5.000000) are not same. Instance vtf_pll_test.uut.instance_name.inst.plle3_adv_inst.

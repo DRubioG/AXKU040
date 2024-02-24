@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:D:/ax/ax7035/demo/09_fifo_test/fifo_test.srcs/constrs_1/new/fifo_test.xdc rfile:../../../fifo_test.srcs/constrs_1/new/fifo_test.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AK17 [get_ports sys_clk_p]
+set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AK8 [get_ports {rst_n}]

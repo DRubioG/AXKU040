@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Apr 30 10:53:28 2021
+# Process ID: 36224
+# Current directory: D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1
+# Command line: vivado.exe -log example_ibert_sfp_12_5g.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source example_ibert_sfp_12_5g.tcl
+# Log file: D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/example_ibert_sfp_12_5g.vds
+# Journal file: D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source example_ibert_sfp_12_5g.tcl -notrace

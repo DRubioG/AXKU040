@@ -1,0 +1,7 @@
+set_property SRC_FILE_INFO {cfile:E:/ax/ku040/04_PLL_test/04_PLL.srcs/constrs_1/new/pll.xdc rfile:../../../04_PLL.srcs/constrs_1/new/pll.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AB24 [get_ports clk_out]
+set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN K21 [get_ports rst_n]
+set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AK17 [get_ports sys_clk_p]

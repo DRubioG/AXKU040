@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sat Jul 17 15:02:27 2021
+# Process ID: 22552
+# Current directory: D:/ax/ax7035/demo/09_fifo_test/fifo_test.runs/ila_m0_synth_1
+# Command line: vivado.exe -log ila_m0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ila_m0.tcl
+# Log file: D:/ax/ax7035/demo/09_fifo_test/fifo_test.runs/ila_m0_synth_1/ila_m0.vds
+# Journal file: D:/ax/ax7035/demo/09_fifo_test/fifo_test.runs/ila_m0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source ila_m0.tcl -notrace

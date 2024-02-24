@@ -1,0 +1,8 @@
+set_property IOSTANDARD LVCMOS18 [get_ports {disable1[0]}]
+set_property PACKAGE_PIN AM10 [get_ports  {disable1[0]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {disable1[1]}]
+set_property PACKAGE_PIN AL10 [get_ports  {disable1[1]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {disable1[2]}]
+set_property PACKAGE_PIN AP9 [get_ports  {disable1[2]}]
+set_property IOSTANDARD LVCMOS18 [get_ports {disable1[3]}]
+set_property PACKAGE_PIN AN9 [get_ports  {disable1[3]}]

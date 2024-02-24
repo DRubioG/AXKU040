@@ -1,0 +1,91 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Fri Apr 30 10:58:54 2021
+| Host         : DESKTOP-C3F5G4E running 64-bit major release  (build 9200)
+| Command      : report_methodology -file example_ibert_sfp_12_5g_methodology_drc_routed.rpt -pb example_ibert_sfp_12_5g_methodology_drc_routed.pb -rpx example_ibert_sfp_12_5g_methodology_drc_routed.rpx
+| Design       : example_ibert_sfp_12_5g
+| Device       : xcku040-ffva1156-2-i
+| Speed File   : -2
+| Design State : Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 10
++-----------+----------+--------------------------------------------------+------------+
+| Rule      | Severity | Description                                      | Violations |
++-----------+----------+--------------------------------------------------+------------+
+| PDRC-190  | Warning  | Suboptimally placed synchronized register chain  | 1          |
+| TIMING-9  | Warning  | Unknown CDC Logic                                | 1          |
+| TIMING-10 | Warning  | Missing property on synchronizer                 | 1          |
+| XDCB-5    | Warning  | Runtime inefficient way to find pin objects      | 1          |
+| CLKC-3    | Advisory | Clock Buffer has LOC and not CLOCK_REGION        | 4          |
+| CLKC-45   | Advisory | GTHE3_COMMON REFCLKMONITOR pin should drive BUFG | 2          |
++-----------+----------+--------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-190#1 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[2] in site SLICE_X83Y15 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-10#1 Warning
+Missing property on synchronizer  
+One or more logic synchronizer has been detected between 2 clock domains but the synchronizer does not have the property ASYNC_REG defined on one or both registers. It is recommended to run report_cdc for a complete and detailed CDC coverage
+Related violations: <none>
+
+XDCB-5#1 Warning
+Runtime inefficient way to find pin objects  
+The option 'objects : [get_pins -hierarchical -filter {NAME =~ "*BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK"}]' of constraint 'create_clock' uses inefficient query to find pin objects (see constraint position '52' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: d:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/impl_1/.Xil/Vivado-32564-DESKTOP-C3F5G4E/dbg_hub_CV.0/out/xsdbm.xdc (Line: 5)
+Related violations: <none>
+
+CLKC-3#1 Advisory
+Clock Buffer has LOC and not CLOCK_REGION  
+The BUFGCE cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/u_buf_dmonitorclk has a LOC constraint, but using the CLOCK_REGION property instead would give more flexibility to the Placer to select the appropriate routing/distribution track.
+Related violations: <none>
+
+CLKC-3#2 Advisory
+Clock Buffer has LOC and not CLOCK_REGION  
+The BUFGCE cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/u_buf_dmonitorclk has a LOC constraint, but using the CLOCK_REGION property instead would give more flexibility to the Placer to select the appropriate routing/distribution track.
+Related violations: <none>
+
+CLKC-3#3 Advisory
+Clock Buffer has LOC and not CLOCK_REGION  
+The BUFGCE cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/u_buf_dmonitorclk has a LOC constraint, but using the CLOCK_REGION property instead would give more flexibility to the Placer to select the appropriate routing/distribution track.
+Related violations: <none>
+
+CLKC-3#4 Advisory
+Clock Buffer has LOC and not CLOCK_REGION  
+The BUFGCE cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/u_buf_dmonitorclk has a LOC constraint, but using the CLOCK_REGION property instead would give more flexibility to the Placer to select the appropriate routing/distribution track.
+Related violations: <none>
+
+CLKC-45#1 Advisory
+GTHE3_COMMON REFCLKMONITOR pin should drive BUFG  
+The GTHE3_COMMON cell u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_gthe3_common pin u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_gthe3_common/REFCLKOUTMONITOR0 should be driving a global clock buffer such as BUFGCE, BUFGCE_DIV, or BUFGCTRL, but not a BUFG_GT. Instead, it is driving a FDRE cell u_ibert_gth_core/inst/QUAD[0].u_q/u_common/U_COMMON_REGS/reg_20e/I_EN_STAT_EQ1.U_STAT/xsdb_reg_reg[3] (and 1 other loads).
+Related violations: <none>
+
+CLKC-45#2 Advisory
+GTHE3_COMMON REFCLKMONITOR pin should drive BUFG  
+The GTHE3_COMMON cell u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_gthe3_common pin u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_gthe3_common/REFCLKOUTMONITOR1 should be driving a global clock buffer such as BUFGCE, BUFGCE_DIV, or BUFGCTRL, but not a BUFG_GT. Instead, it is driving a FDRE cell u_ibert_gth_core/inst/QUAD[0].u_q/u_common/U_COMMON_REGS/reg_20e/I_EN_STAT_EQ1.U_STAT/xsdb_reg_reg[4] (and 1 other loads).
+Related violations: <none>
+
+

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Jul  7 13:21:29 2021
+# Process ID: 12444
+# Current directory: E:/ax/ku040/04_PLL/04_PLL.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source E:/ax/ku040/04_PLL/04_PLL.sim/sim_1/behav/xsim/xsim.dir/vtf_pll_test_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: E:/ax/ku040/04_PLL/04_PLL.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: E:/ax/ku040/04_PLL/04_PLL.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source E:/ax/ku040/04_PLL/04_PLL.sim/sim_1/behav/xsim/xsim.dir/vtf_pll_test_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Jul  7 13:21:30 2021...

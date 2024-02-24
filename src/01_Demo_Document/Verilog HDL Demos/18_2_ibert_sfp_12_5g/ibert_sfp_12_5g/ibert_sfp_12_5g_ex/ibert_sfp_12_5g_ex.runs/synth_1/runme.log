@@ -1,0 +1,603 @@
+
+*** Running vivado
+    with args -log example_ibert_sfp_12_5g.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source example_ibert_sfp_12_5g.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source example_ibert_sfp_12_5g.tcl -notrace
+Command: synth_design -top example_ibert_sfp_12_5g -part xcku040-ffva1156-2-i
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku040'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 44440 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 422.711 ; gain = 59.059
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'example_ibert_sfp_12_5g' [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/imports/example_ibert_sfp_12_5g.v:21]
+INFO: [Synth 8-638] synthesizing module 'IBUFDS_GTE3' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:19639]
+	Parameter REFCLK_EN_TX_PATH bound to: 1'b0 
+	Parameter REFCLK_HROW_CK_SEL bound to: 2'b00 
+	Parameter REFCLK_ICNTL_RX bound to: 2'b00 
+INFO: [Synth 8-256] done synthesizing module 'IBUFDS_GTE3' (1#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:19639]
+INFO: [Synth 8-638] synthesizing module 'BUFG_GT' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:760]
+INFO: [Synth 8-256] done synthesizing module 'BUFG_GT' (2#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:760]
+INFO: [Synth 8-638] synthesizing module 'ibert_sfp_12_5g' [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/realtime/ibert_sfp_12_5g_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'ibert_sfp_12_5g' (3#1) [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/realtime/ibert_sfp_12_5g_stub.v:6]
+WARNING: [Synth 8-350] instance 'u_ibert_gth_core' of module 'ibert_sfp_12_5g' requires 24 connections, but only 23 given [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/imports/example_ibert_sfp_12_5g.v:124]
+INFO: [Synth 8-256] done synthesizing module 'example_ibert_sfp_12_5g' (4#1) [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/imports/example_ibert_sfp_12_5g.v:21]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 474.391 ; gain = 110.738
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 474.391 ; gain = 110.738
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc] for cell 'u_ibert_gth_core'
+Finished Parsing XDC File [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc] for cell 'u_ibert_gth_core'
+Parsing XDC File [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/imports/example_ibert_sfp_12_5g.xdc]
+Finished Parsing XDC File [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/imports/example_ibert_sfp_12_5g.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/imports/example_ibert_sfp_12_5g.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/example_ibert_sfp_12_5g_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/example_ibert_sfp_12_5g_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 971.699 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 971.699 ; gain = 608.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku040-ffva1156-2-i
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 971.699 ; gain = 608.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for gth_rxn_i[0]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_rxn_i[0]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_rxn_i[1]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_rxn_i[1]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_rxn_i[2]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_rxn_i[2]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_rxn_i[3]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_rxn_i[3]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_rxp_i[0]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_rxp_i[0]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_rxp_i[1]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_rxp_i[1]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_rxp_i[2]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_rxp_i[2]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_rxp_i[3]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_rxp_i[3]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_txn_o[0]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 17).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_txn_o[0]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 18).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_txn_o[1]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 19).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_txn_o[1]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 20).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_txn_o[2]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 21).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_txn_o[2]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 22).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_txn_o[3]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 23).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_txn_o[3]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 24).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_txp_o[0]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 25).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_txp_o[0]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 26).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_txp_o[1]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 27).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_txp_o[1]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 28).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_txp_o[2]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 29).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_txp_o[2]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 30).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_txp_o[3]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 31).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_txp_o[3]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-69464-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 32).
+Applied set_property DONT_TOUCH = true for u_ibert_gth_core. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 971.699 ; gain = 608.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 971.699 ; gain = 608.047
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1920 (col length:120)
+BRAMs: 1200 (col length: RAMB18 120 RAMB36 60)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 971.699 ; gain = 608.047
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1273.430 ; gain = 909.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1273.430 ; gain = 909.777
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1283.090 ; gain = 919.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1283.090 ; gain = 919.438
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1283.090 ; gain = 919.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1283.090 ; gain = 919.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1283.090 ; gain = 919.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1283.090 ; gain = 919.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1283.090 ; gain = 919.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------+----------+
+|      |BlackBox name   |Instances |
++------+----------------+----------+
+|1     |ibert_sfp_12_5g |         1|
++------+----------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |ibert_sfp_12_5g |     1|
+|2     |BUFG_GT         |     1|
+|3     |IBUFDS_GTE3     |     2|
++------+----------------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    15|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1283.090 ; gain = 919.438
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1283.090 ; gain = 422.129
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1283.090 ; gain = 919.438
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC BUFG_GT_SYNC for BUFG_GT u_gth_sysclk_internal
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+19 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1313.332 ; gain = 949.680
+INFO: [Common 17-1381] The checkpoint 'D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/example_ibert_sfp_12_5g.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file example_ibert_sfp_12_5g_utilization_synth.rpt -pb example_ibert_sfp_12_5g_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.114 . Memory (MB): peak = 1313.719 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 22 15:38:44 2021...
+
+*** Running vivado
+    with args -log example_ibert_sfp_12_5g.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source example_ibert_sfp_12_5g.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source example_ibert_sfp_12_5g.tcl -notrace
+Command: synth_design -top example_ibert_sfp_12_5g -part xcku040-ffva1156-2-i
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku040'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 35116 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 423.547 ; gain = 59.484
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'example_ibert_sfp_12_5g' [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/imports/example_ibert_sfp_12_5g.v:21]
+INFO: [Synth 8-638] synthesizing module 'IBUFDS_GTE3' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:19639]
+	Parameter REFCLK_EN_TX_PATH bound to: 1'b0 
+	Parameter REFCLK_HROW_CK_SEL bound to: 2'b00 
+	Parameter REFCLK_ICNTL_RX bound to: 2'b00 
+INFO: [Synth 8-256] done synthesizing module 'IBUFDS_GTE3' (1#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:19639]
+INFO: [Synth 8-638] synthesizing module 'BUFG_GT' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:760]
+INFO: [Synth 8-256] done synthesizing module 'BUFG_GT' (2#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:760]
+INFO: [Synth 8-638] synthesizing module 'ibert_sfp_12_5g' [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/realtime/ibert_sfp_12_5g_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'ibert_sfp_12_5g' (3#1) [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/realtime/ibert_sfp_12_5g_stub.v:6]
+WARNING: [Synth 8-350] instance 'u_ibert_gth_core' of module 'ibert_sfp_12_5g' requires 24 connections, but only 23 given [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/imports/example_ibert_sfp_12_5g.v:124]
+INFO: [Synth 8-256] done synthesizing module 'example_ibert_sfp_12_5g' (4#1) [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/imports/example_ibert_sfp_12_5g.v:21]
+WARNING: [Synth 8-3917] design example_ibert_sfp_12_5g has port disable1[3] driven by constant 0
+WARNING: [Synth 8-3917] design example_ibert_sfp_12_5g has port disable1[2] driven by constant 0
+WARNING: [Synth 8-3917] design example_ibert_sfp_12_5g has port disable1[1] driven by constant 0
+WARNING: [Synth 8-3917] design example_ibert_sfp_12_5g has port disable1[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 475.391 ; gain = 111.328
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 475.391 ; gain = 111.328
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc] for cell 'u_ibert_gth_core'
+Finished Parsing XDC File [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc] for cell 'u_ibert_gth_core'
+Parsing XDC File [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/imports/example_ibert_sfp_12_5g.xdc]
+Finished Parsing XDC File [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/imports/example_ibert_sfp_12_5g.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/imports/example_ibert_sfp_12_5g.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/example_ibert_sfp_12_5g_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/example_ibert_sfp_12_5g_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.srcs/constrs_1/new/sfpp.xdc]
+Finished Parsing XDC File [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.srcs/constrs_1/new/sfpp.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.srcs/constrs_1/new/sfpp.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/example_ibert_sfp_12_5g_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/example_ibert_sfp_12_5g_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 971.680 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 971.680 ; gain = 607.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku040-ffva1156-2-i
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 971.680 ; gain = 607.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for gth_rxn_i[0]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_rxn_i[0]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_rxn_i[1]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_rxn_i[1]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_rxn_i[2]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_rxn_i[2]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_rxn_i[3]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_rxn_i[3]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_rxp_i[0]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_rxp_i[0]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_rxp_i[1]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_rxp_i[1]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_rxp_i[2]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_rxp_i[2]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_rxp_i[3]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_rxp_i[3]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_txn_o[0]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 17).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_txn_o[0]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 18).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_txn_o[1]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 19).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_txn_o[1]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 20).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_txn_o[2]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 21).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_txn_o[2]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 22).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_txn_o[3]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 23).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_txn_o[3]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 24).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_txp_o[0]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 25).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_txp_o[0]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 26).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_txp_o[1]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 27).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_txp_o[1]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 28).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_txp_o[2]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 29).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_txp_o[2]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 30).
+Applied set_property IO_BUFFER_TYPE = NONE for gth_txp_o[3]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 31).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for gth_txp_o[3]. (constraint file  D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/.Xil/Vivado-36224-DESKTOP-C3F5G4E/dcp1/ibert_sfp_12_5g_in_context.xdc, line 32).
+Applied set_property DONT_TOUCH = true for u_ibert_gth_core. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 971.680 ; gain = 607.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 971.680 ; gain = 607.617
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1920 (col length:120)
+BRAMs: 1200 (col length: RAMB18 120 RAMB36 60)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design example_ibert_sfp_12_5g has port disable1[3] driven by constant 0
+WARNING: [Synth 8-3917] design example_ibert_sfp_12_5g has port disable1[2] driven by constant 0
+WARNING: [Synth 8-3917] design example_ibert_sfp_12_5g has port disable1[1] driven by constant 0
+WARNING: [Synth 8-3917] design example_ibert_sfp_12_5g has port disable1[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 971.680 ; gain = 607.617
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1271.902 ; gain = 907.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1271.902 ; gain = 907.840
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1281.492 ; gain = 917.430
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1281.492 ; gain = 917.430
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1281.492 ; gain = 917.430
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1281.492 ; gain = 917.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1281.492 ; gain = 917.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1281.492 ; gain = 917.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1281.492 ; gain = 917.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------+----------+
+|      |BlackBox name   |Instances |
++------+----------------+----------+
+|1     |ibert_sfp_12_5g |         1|
++------+----------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |ibert_sfp_12_5g |     1|
+|2     |BUFG_GT         |     1|
+|3     |IBUFDS_GTE3     |     2|
+|4     |OBUF            |     4|
++------+----------------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    19|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1281.492 ; gain = 917.430
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1281.492 ; gain = 421.141
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1281.492 ; gain = 917.430
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-441] Inserted BUFG_GT_SYNC BUFG_GT_SYNC for BUFG_GT u_gth_sysclk_internal
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+20 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1312.246 ; gain = 948.184
+INFO: [Common 17-1381] The checkpoint 'D:/xilinx_fpga/ku040/sfp_ibert/ibert_sfp_12_5g/ibert_sfp_12_5g_ex/ibert_sfp_12_5g_ex.runs/synth_1/example_ibert_sfp_12_5g.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file example_ibert_sfp_12_5g_utilization_synth.rpt -pb example_ibert_sfp_12_5g_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.117 . Memory (MB): peak = 1312.637 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 30 10:54:08 2021...

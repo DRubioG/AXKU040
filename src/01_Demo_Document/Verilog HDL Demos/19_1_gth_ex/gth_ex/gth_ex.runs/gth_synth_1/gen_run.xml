@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="gth_synth_1" LaunchPart="xcku040-ffva1156-2-i" LaunchTime="1619767960">
+  <File Type="PA-TCL" Name="gth.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="gth_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="gth_reports.tcl"/>
+  <File Type="RDS-RDS" Name="gth.vds"/>
+  <File Type="RDS-UTIL" Name="gth_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="gth_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="gth.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="gth_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="gth_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/gth">
+    <File Path="$PSRCDIR/sources_1/ip/gth/gth.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_1/project_1.srcs/sources_1/ip/gth/gth.xci"/>
+        <Attr Name="ImportTime" Val="1619665112"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="gth"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/gth">
+    <File Path="$PSRCDIR/sources_1/ip/gth/gth.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../project_1/project_1.srcs/sources_1/ip/gth/gth.xci"/>
+        <Attr Name="ImportTime" Val="1619665112"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="gth"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

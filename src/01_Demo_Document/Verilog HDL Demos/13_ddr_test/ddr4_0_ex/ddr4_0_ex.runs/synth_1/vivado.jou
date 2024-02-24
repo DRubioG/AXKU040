@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Aug 25 14:29:17 2021
+# Process ID: 17124
+# Current directory: e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1
+# Command line: vivado.exe -log example_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source example_top.tcl
+# Log file: e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/example_top.vds
+# Journal file: e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source example_top.tcl -notrace

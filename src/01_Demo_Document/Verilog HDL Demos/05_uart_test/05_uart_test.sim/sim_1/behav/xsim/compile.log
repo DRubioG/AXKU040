@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/AX7325/demo/04_uart_test/uart_test/src/uart_rx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/AX7325/demo/04_uart_test/uart_test/src/uart_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/AX7325/demo/04_uart_test/uart_test/src/uart_tx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/AX7325/demo/04_uart_test/uart_test/uart_test.srcs/sim_1/new/vtf_uart_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vtf_uart_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/AX7325/demo/04_uart_test/uart_test/uart_test.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

@@ -1,0 +1,9 @@
+0.6
+2017.4
+Dec 15 2017
+21:07:18
+E:/ax/AX7325_CD_20201209/demo/03_pll_test/pll_test/src/pll_test.v,1625630042,verilog,,E:/ax/ku040/04_PLL_test/04_PLL.srcs/sim_1/new/vtf_pll_test.v,,pll_test,,,../../../../04_PLL.srcs/sources_1/ip/clk_wiz_0_1,,,,,
+E:/ax/ku040/04_PLL_test/04_PLL.sim/sim_1/behav/xsim/glbl.v,1513215259,verilog,,,,glbl,,,,,,,,
+E:/ax/ku040/04_PLL_test/04_PLL.srcs/sim_1/new/vtf_pll_test.v,1625635251,verilog,,,,vtf_pll_test,,,../../../../04_PLL.srcs/sources_1/ip/clk_wiz_0_1,,,,,
+E:/ax/ku040/04_PLL_test/04_PLL.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0.v,1625629507,verilog,,E:/ax/AX7325_CD_20201209/demo/03_pll_test/pll_test/src/pll_test.v,,clk_wiz_0,,,../../../../04_PLL.srcs/sources_1/ip/clk_wiz_0_1,,,,,
+E:/ax/ku040/04_PLL_test/04_PLL.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0_clk_wiz.v,1625629507,verilog,,E:/ax/ku040/04_PLL_test/04_PLL.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0.v,,clk_wiz_0_clk_wiz,,,../../../../04_PLL.srcs/sources_1/ip/clk_wiz_0_1,,,,,

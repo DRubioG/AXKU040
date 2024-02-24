@@ -1,0 +1,119 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Wed Sep 15 18:12:18 2021
+| Host         : DESKTOP-C3F5G4E running 64-bit major release  (build 9200)
+| Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
+| Design       : top
+| Device       : xcku040-ffva1156-2-i
+| Speed File   : -2
+| Design State : Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 15
++-----------+----------+----------------------------------------------------------+------------+
+| Rule      | Severity | Description                                              | Violations |
++-----------+----------+----------------------------------------------------------+------------+
+| PDRC-190  | Warning  | Suboptimally placed synchronized register chain          | 1          |
+| TIMING-4  | Warning  | Invalid primary clock redefinition on a clock tree       | 2          |
+| TIMING-6  | Warning  | No common primary clock between related clocks           | 4          |
+| TIMING-16 | Warning  | Large setup violation                                    | 2          |
+| TIMING-18 | Warning  | Missing input or output delay                            | 1          |
+| TIMING-27 | Warning  | Invalid primary clock on hierarchical pin                | 2          |
+| XDCB-5    | Warning  | Runtime inefficient way to find pin objects              | 1          |
+| CLKC-27   | Advisory | MMCME3 with BUF_IN drives sequential IO not with CLKOUT0 | 1          |
+| CLKC-39   | Advisory | Substitute PLLE3 for MMCME3 check                        | 1          |
++-----------+----------+----------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-190#1 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[2] in site SLICE_X25Y56 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+TIMING-4#1 Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock clkref_m0/inst/clk_in1 is defined downstream of clock sys_clk_p and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-4#2 Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock video_pll_m0/inst/clk_in1 is defined downstream of clock sys_clk_p and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-6#1 Warning
+No common primary clock between related clocks  
+The clocks clk_out1_video_pll and mmcm_clkout0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_video_pll] -to [get_clocks mmcm_clkout0]
+Related violations: <none>
+
+TIMING-6#2 Warning
+No common primary clock between related clocks  
+The clocks clk_out2_video_pll and mmcm_clkout0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out2_video_pll] -to [get_clocks mmcm_clkout0]
+Related violations: <none>
+
+TIMING-6#3 Warning
+No common primary clock between related clocks  
+The clocks mmcm_clkout0 and clk_out1_video_pll are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks mmcm_clkout0] -to [get_clocks clk_out1_video_pll]
+Related violations: <none>
+
+TIMING-6#4 Warning
+No common primary clock between related clocks  
+The clocks mmcm_clkout0 and clk_out2_video_pll are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks mmcm_clkout0] -to [get_clocks clk_out2_video_pll]
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -2.214 ns between video_timing_data_m0/read_req_reg/C (clocked by clk_out1_video_pll) and frame_read_write_m0/frame_fifo_read_m0/read_req_d0_reg/D (clocked by mmcm_clkout0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -4.114 ns between frame_read_write_m0/frame_fifo_read_m0/read_req_ack_reg/C (clocked by mmcm_clkout0) and video_timing_data_m0/read_req_reg/D (clocked by clk_out1_video_pll). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An output delay is missing on c0_ddr4_reset_n relative to clock(s) sys_clk_p
+Related violations: <none>
+
+TIMING-27#1 Warning
+Invalid primary clock on hierarchical pin  
+A primary clock clkref_m0/inst/clk_in1 is created on an inappropriate internal pin clkref_m0/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+TIMING-27#2 Warning
+Invalid primary clock on hierarchical pin  
+A primary clock video_pll_m0/inst/clk_in1 is created on an inappropriate internal pin video_pll_m0/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+XDCB-5#1 Warning
+Runtime inefficient way to find pin objects  
+The option 'objects : [get_pins -hierarchical -filter {NAME =~ "*BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK"}]' of constraint 'create_clock' uses inefficient query to find pin objects (see constraint position '60' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: e:/sd_bbmmpp/sd_bbmmpp.runs/impl_1/.Xil/Vivado-19396-DESKTOP-C3F5G4E/dbg_hub_CV.0/out/xsdbm.xdc (Line: 5)
+Related violations: <none>
+
+CLKC-27#1 Advisory
+MMCME3 with BUF_IN drives sequential IO not with CLKOUT0  
+The MMCME3 cell clkref_m0/inst/mmcme3_adv_inst has COMPENSATION value BUF_IN, but CLKOUT1 output drives sequential IO cells. (The problem cell is hdmi_sda_IOBUF_inst/IBUFCTRL_INST (in hdmi_sda_IOBUF_inst macro).) In order to achieve insertion delay and phase-alignment for the IO sequential cells, a COMPENSATION of ZHOLD must be used and CLKOUT0 output must be the driver%STR
+Related violations: <none>
+
+CLKC-39#1 Advisory
+Substitute PLLE3 for MMCME3 check  
+The MMCME3 cell clkref_m0/inst/mmcme3_adv_inst has a single input clock whose source driver, IBUFCTRL sys_clk_ibufgds/IBUFCTRL_INST (in sys_clk_ibufgds macro), is not optimally located and the MMCM has a configuration which could be accommodated by a PLL.  Consider changing the MMCM to a PLL which could align better with the input clock driver.
+Related violations: <none>
+
+

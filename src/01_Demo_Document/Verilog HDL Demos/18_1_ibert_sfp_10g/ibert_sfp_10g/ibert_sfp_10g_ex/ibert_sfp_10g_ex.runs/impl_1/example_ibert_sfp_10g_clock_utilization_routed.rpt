@@ -1,0 +1,931 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date              : Sun Apr 25 11:13:29 2021
+| Host              : DESKTOP-C3F5G4E running 64-bit major release  (build 9200)
+| Command           : report_clock_utilization -file example_ibert_sfp_10g_clock_utilization_routed.rpt
+| Design            : example_ibert_sfp_10g
+| Device            : xcku040-ffva1156
+| Speed File        : -2  PRODUCTION 1.24 11-02-2017
+| Temperature Grade : I
+--------------------------------------------------------------------------------------------------------
+
+Clock Utilization Report
+
+Table of Contents
+-----------------
+1. Clock Primitive Utilization
+2. Global Clock Resources
+3. Global Clock Source Details
+4. Local Clock Details
+5. Clock Regions : Clock Primitives
+6. Clock Regions : Load Primitives
+7. Clock Regions : Global Clock Summary
+8. Clock Regions : Routing Resource Utilization
+9. Device Cell Placement Summary for Global Clock g0
+10. Device Cell Placement Summary for Global Clock g1
+11. Device Cell Placement Summary for Global Clock g2
+12. Device Cell Placement Summary for Global Clock g3
+13. Device Cell Placement Summary for Global Clock g4
+14. Device Cell Placement Summary for Global Clock g5
+15. Device Cell Placement Summary for Global Clock g6
+16. Device Cell Placement Summary for Global Clock g7
+17. Device Cell Placement Summary for Global Clock g8
+18. Device Cell Placement Summary for Global Clock g9
+19. Device Cell Placement Summary for Global Clock g10
+20. Device Cell Placement Summary for Global Clock g11
+21. Device Cell Placement Summary for Global Clock g12
+22. Device Cell Placement Summary for Global Clock g13
+23. Device Cell Placement Summary for Global Clock g14
+24. Device Cell Placement Summary for Global Clock g15
+25. Device Cell Placement Summary for Global Clock g16
+26. Device Cell Placement Summary for Global Clock g17
+27. Device Cell Placement Summary for Global Clock g18
+28. Device Cell Placement Summary for Global Clock g19
+29. Device Cell Placement Summary for Global Clock g20
+30. Device Cell Placement Summary for Global Clock g21
+31. Device Cell Placement Summary for Global Clock g22
+32. Clock Region Cell Placement per Global Clock: Region X2Y0
+33. Clock Region Cell Placement per Global Clock: Region X3Y0
+34. Clock Region Cell Placement per Global Clock: Region X2Y1
+35. Clock Region Cell Placement per Global Clock: Region X3Y1
+
+1. Clock Primitive Utilization
+------------------------------
+
++------------+------+-----------+-----+--------------+--------+
+| Type       | Used | Available | LOC | Clock Region | Pblock |
++------------+------+-----------+-----+--------------+--------+
+| BUFGCE     |    6 |       240 |   0 |            0 |      4 |
+| BUFGCE_DIV |    0 |        40 |   0 |            0 |      0 |
+| BUFGCTRL   |    0 |        80 |   0 |            0 |      0 |
+| BUFG_GT    |   17 |       120 |   0 |            0 |     16 |
+| MMCM       |    1 |        10 |   0 |            0 |      0 |
+| PLL        |    0 |        20 |   0 |            0 |      0 |
++------------+------+-----------+-----+--------------+--------+
+
+
+2. Global Clock Resources
+-------------------------
+
++-----------+-----------+-----------------+------------+---------------+--------------+------+-------------------+-------------------+-------------+-----------------+--------------+--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+----------------------------------------------------------------------+
+| Global Id | Source Id | Driver Type/Pin | Constraint | Site          | Clock Region | Root | Clock Delay Group | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                                                                                      | Driver Pin                                                                | Net                                                                  |
++-----------+-----------+-----------------+------------+---------------+--------------+------+-------------------+-------------------+-------------+-----------------+--------------+--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+----------------------------------------------------------------------+
+| g0        | src0      | BUFGCE/O        | None       | BUFGCE_X1Y10  | X2Y0         | X2Y0 |                   |                 2 |       10838 |               0 |       10.000 | USE_DIVIDER.dclk_mmcm                                                                      | dbg_hub/inst/BSCANID.u_xsdbm_id/USE_DIVIDER.BUFG_inst_div/O               | dbg_hub/inst/BSCANID.u_xsdbm_id/sl_iport0_o[1]                       |
+| g1        | src1      | BUFG_GT/O       | PBlock     | BUFG_GT_X0Y14 | X3Y0         | X3Y0 |                   |                 2 |         748 |               0 |        4.000 | rxusrclk2_i[0]                                                                             | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rx_ind.u_rxusr0_1/O | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk2_o[0] |
+| g2        | src1      | BUFG_GT/O       | PBlock     | BUFG_GT_X0Y15 | X3Y0         | X3Y0 |                   |                 2 |          23 |               0 |        4.000 | rxoutclk_o[0]                                                                              | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rx_ind.u_rxusr0_0/O | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk_o[0]  |
+| g3        | src2      | BUFG_GT/O       | PBlock     | BUFG_GT_X0Y12 | X3Y0         | X3Y0 |                   |                 2 |         748 |               0 |        4.000 | rxusrclk2_i__0[1]                                                                          | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rx_ind.u_rxusr1_1/O | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk2_o[1] |
+| g4        | src2      | BUFG_GT/O       | PBlock     | BUFG_GT_X0Y13 | X3Y0         | X3Y0 |                   |                 2 |          23 |               0 |        4.000 | rxoutclk_o[1]                                                                              | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rx_ind.u_rxusr1_0/O | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk_o[1]  |
+| g5        | src3      | BUFG_GT/O       | PBlock     | BUFG_GT_X0Y20 | X3Y0         | X3Y0 |                   |                 2 |         748 |               0 |        4.000 | rxusrclk2_i[2]                                                                             | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rx_ind.u_rxusr2_1/O | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk2_o[2] |
+| g6        | src3      | BUFG_GT/O       | PBlock     | BUFG_GT_X0Y16 | X3Y0         | X3Y0 |                   |                 2 |          23 |               0 |        4.000 | rxoutclk_o[2]                                                                              | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rx_ind.u_rxusr2_0/O | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk_o[2]  |
+| g7        | src4      | BUFG_GT/O       | PBlock     | BUFG_GT_X0Y18 | X3Y0         | X3Y0 |                   |                 2 |         748 |               0 |        4.000 | rxusrclk2_i__0[3]                                                                          | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rx_ind.u_rxusr3_1/O | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk2_o[3] |
+| g8        | src4      | BUFG_GT/O       | PBlock     | BUFG_GT_X0Y19 | X3Y0         | X3Y0 |                   |                 2 |          23 |               0 |        4.000 | rxoutclk_o[3]                                                                              | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rx_ind.u_rxusr3_0/O | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk_o[3]  |
+| g9        | src5      | BUFGCE/O        | None       | BUFGCE_X1Y5   | X2Y0         | X2Y0 |                   |                 3 |         473 |               0 |       33.000 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O      | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                               |
+| g10       | src1      | BUFG_GT/O       | PBlock     | BUFG_GT_X0Y21 | X3Y0         | X3Y0 |                   |                 2 |         408 |               0 |        4.000 | txusrclk2_i[0]                                                                             | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/tx_ind.u_txusr0_1/O | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk2_o[0] |
+| g11       | src1      | BUFG_GT/O       | PBlock     | BUFG_GT_X0Y22 | X3Y0         | X3Y0 |                   |                 2 |          23 |               0 |        4.000 | txoutclk_o[0]                                                                              | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/tx_ind.u_txusr0_0/O | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk_o[0]  |
+| g12       | src2      | BUFG_GT/O       | PBlock     | BUFG_GT_X0Y17 | X3Y0         | X3Y0 |                   |                 1 |         408 |               0 |        4.000 | txusrclk2_i__0[1]                                                                          | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/tx_ind.u_txusr1_1/O | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk2_o[1] |
+| g13       | src2      | BUFG_GT/O       | PBlock     | BUFG_GT_X0Y23 | X3Y0         | X3Y0 |                   |                 2 |          23 |               0 |        4.000 | txoutclk_o[1]                                                                              | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/tx_ind.u_txusr1_0/O | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk_o[1]  |
+| g14       | src3      | BUFG_GT/O       | PBlock     | BUFG_GT_X0Y8  | X3Y0         | X3Y0 |                   |                 1 |         408 |               0 |        4.000 | txusrclk2_i[2]                                                                             | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/tx_ind.u_txusr2_1/O | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk2_o[2] |
+| g15       | src3      | BUFG_GT/O       | PBlock     | BUFG_GT_X0Y4  | X3Y0         | X3Y0 |                   |                 2 |          23 |               0 |        4.000 | txoutclk_o[2]                                                                              | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/tx_ind.u_txusr2_0/O | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk_o[2]  |
+| g16       | src4      | BUFG_GT/O       | PBlock     | BUFG_GT_X0Y6  | X3Y0         | X3Y0 |                   |                 2 |         408 |               0 |        4.000 | txusrclk2_i__0[3]                                                                          | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/tx_ind.u_txusr3_1/O | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk2_o[3] |
+| g17       | src4      | BUFG_GT/O       | PBlock     | BUFG_GT_X0Y7  | X3Y0         | X3Y0 |                   |                 2 |          23 |               0 |        4.000 | txoutclk_o[3]                                                                              | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/tx_ind.u_txusr3_0/O | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk_o[3]  |
+| g18       | src1      | BUFGCE/O        | PBlock     | BUFGCE_X1Y0   | X2Y0         | X3Y0 |                   |                 1 |          47 |               0 |        4.000 | u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/u_gthe3_channel/DMONITOROUT[16]               | u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/u_buf_dmonitorclk/O          | u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/dmonitorclk_o           |
+| g19       | src2      | BUFGCE/O        | PBlock     | BUFGCE_X1Y1   | X2Y0         | X3Y0 |                   |                 1 |          47 |               0 |        4.000 | u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/u_gthe3_channel/DMONITOROUT[16]               | u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/u_buf_dmonitorclk/O          | u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/dmonitorclk_o           |
+| g20       | src3      | BUFGCE/O        | PBlock     | BUFGCE_X1Y2   | X2Y0         | X3Y0 |                   |                 1 |          47 |               0 |        4.000 | u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/u_gthe3_channel/DMONITOROUT[16]               | u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/u_buf_dmonitorclk/O          | u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/dmonitorclk_o           |
+| g21       | src4      | BUFGCE/O        | PBlock     | BUFGCE_X1Y3   | X2Y0         | X3Y0 |                   |                 1 |          47 |               0 |        4.000 | u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/u_gthe3_channel/DMONITOROUT[16]               | u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/u_buf_dmonitorclk/O          | u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/dmonitorclk_o           |
+| g22       | src6      | BUFG_GT/O       | None       | BUFG_GT_X0Y9  | X3Y0         | X2Y0 | n/a               |                 1 |           0 |               1 |        8.000 | gth_refclk0_0                                                                              | u_gth_sysclk_internal/O                                                   | gth_sysclk_i                                                         |
++-----------+-----------+-----------------+------------+---------------+--------------+------+-------------------+-------------------+-------------+-----------------+--------------+--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+----------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+
+
+3. Global Clock Source Details
+------------------------------
+
++-----------+-----------+-------------------------------+---------------------+--------------------+--------------+-------------+-----------------+---------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+
+| Source Id | Global Id | Driver Type/Pin               | Constraint          | Site               | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock                                                                               | Driver Pin                                                                                 | Net                                                                  |
++-----------+-----------+-------------------------------+---------------------+--------------------+--------------+-------------+-----------------+---------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+
+| src0      | g0        | MMCME3_ADV/CLKOUT0            | None                | MMCME3_ADV_X1Y0    | X2Y0         |           1 |               0 |              10.000 | USE_DIVIDER.dclk_mmcm                                                                      | dbg_hub/inst/BSCANID.u_xsdbm_id/USE_DIVIDER.ULTRASCALE.U_GT_MMCM/CLKOUT0                   | dbg_hub/inst/BSCANID.u_xsdbm_id/USE_DIVIDER.dclk_mmcm                |
+| src1      | g18       | GTHE3_CHANNEL/DMONITOROUT[16] | GTHE3_CHANNEL_X0Y0* | GTHE3_CHANNEL_X0Y0 | X3Y0         |           1 |               0 |               4.000 | u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/u_gthe3_channel/DMONITOROUT[16]               | u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/u_gthe3_channel/DMONITOROUT[16]               | u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/dmonitorclk             |
+| src1      | g1, g2    | GTHE3_CHANNEL/RXOUTCLK        | GTHE3_CHANNEL_X0Y0* | GTHE3_CHANNEL_X0Y0 | X3Y0         |           3 |               0 |               4.000 | rxoutclk_o                                                                                 | u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/u_gthe3_channel/RXOUTCLK                      | u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/rxoutclk_o              |
+| src1      | g10, g11  | GTHE3_CHANNEL/TXOUTCLK        | GTHE3_CHANNEL_X0Y0* | GTHE3_CHANNEL_X0Y0 | X3Y0         |           3 |               0 |               4.000 | txoutclk_o                                                                                 | u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/u_gthe3_channel/TXOUTCLK                      | u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/txoutclk_o              |
+| src2      | g19       | GTHE3_CHANNEL/DMONITOROUT[16] | GTHE3_CHANNEL_X0Y1* | GTHE3_CHANNEL_X0Y1 | X3Y0         |           1 |               0 |               4.000 | u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/u_gthe3_channel/DMONITOROUT[16]               | u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/u_gthe3_channel/DMONITOROUT[16]               | u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/dmonitorclk             |
+| src2      | g3, g4    | GTHE3_CHANNEL/RXOUTCLK        | GTHE3_CHANNEL_X0Y1* | GTHE3_CHANNEL_X0Y1 | X3Y0         |           3 |               0 |               4.000 | rxoutclk_o_1                                                                               | u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/u_gthe3_channel/RXOUTCLK                      | u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/rxoutclk_o              |
+| src2      | g12, g13  | GTHE3_CHANNEL/TXOUTCLK        | GTHE3_CHANNEL_X0Y1* | GTHE3_CHANNEL_X0Y1 | X3Y0         |           3 |               0 |               4.000 | txoutclk_o_1                                                                               | u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/u_gthe3_channel/TXOUTCLK                      | u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/txoutclk_o              |
+| src3      | g20       | GTHE3_CHANNEL/DMONITOROUT[16] | GTHE3_CHANNEL_X0Y2* | GTHE3_CHANNEL_X0Y2 | X3Y0         |           1 |               0 |               4.000 | u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/u_gthe3_channel/DMONITOROUT[16]               | u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/u_gthe3_channel/DMONITOROUT[16]               | u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/dmonitorclk             |
+| src3      | g5, g6    | GTHE3_CHANNEL/RXOUTCLK        | GTHE3_CHANNEL_X0Y2* | GTHE3_CHANNEL_X0Y2 | X3Y0         |           3 |               0 |               4.000 | rxoutclk_o_2                                                                               | u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/u_gthe3_channel/RXOUTCLK                      | u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/rxoutclk_o              |
+| src3      | g14, g15  | GTHE3_CHANNEL/TXOUTCLK        | GTHE3_CHANNEL_X0Y2* | GTHE3_CHANNEL_X0Y2 | X3Y0         |           3 |               0 |               4.000 | txoutclk_o_2                                                                               | u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/u_gthe3_channel/TXOUTCLK                      | u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/txoutclk_o              |
+| src4      | g21       | GTHE3_CHANNEL/DMONITOROUT[16] | GTHE3_CHANNEL_X0Y3* | GTHE3_CHANNEL_X0Y3 | X3Y0         |           1 |               0 |               4.000 | u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/u_gthe3_channel/DMONITOROUT[16]               | u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/u_gthe3_channel/DMONITOROUT[16]               | u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/dmonitorclk             |
+| src4      | g7, g8    | GTHE3_CHANNEL/RXOUTCLK        | GTHE3_CHANNEL_X0Y3* | GTHE3_CHANNEL_X0Y3 | X3Y0         |           3 |               0 |               4.000 | rxoutclk_o_3                                                                               | u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/u_gthe3_channel/RXOUTCLK                      | u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/rxoutclk_o              |
+| src4      | g16, g17  | GTHE3_CHANNEL/TXOUTCLK        | GTHE3_CHANNEL_X0Y3* | GTHE3_CHANNEL_X0Y3 | X3Y0         |           3 |               0 |               4.000 | txoutclk_o_3                                                                               | u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/u_gthe3_channel/TXOUTCLK                      | u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/txoutclk_o              |
+| src5      | g9        | BSCANE2/TCK                   | None                | CONFIG_SITE_X0Y0   | X3Y1         |           1 |               0 |              33.000 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/tck_bs |
+| src6      | g22       | IBUFDS_GTE3/ODIV2             | GTHE3_COMMON_X0Y0   | GTHE3_COMMON_X0Y0  | X3Y0         |           2 |               0 |               8.000 | gth_refclk0_0                                                                              | u_buf_gth_q0_clk0/ODIV2                                                                    | gth_odiv2_0_i                                                        |
++-----------+-----------+-------------------------------+---------------------+--------------------+--------------+-------------+-----------------+---------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** In Constraint column, symbol '*' indicates multiple constraint types applied to the clock source. Please check for potential conflicts.
+
+
+4. Local Clock Details
+----------------------
+
++----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+----------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+
+| Local Id | Driver Type/Pin | Constraint | Site/BEL          | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                                                                                               | Net                                                                                                          |
++----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+----------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------||
+| 0        | FDRE/Q          | PBlock     | SLICE_X99Y0/HFF   | X3Y0         |           1 |               1 |              |       | u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_CHANNEL_REGS/reg_229/I_EN_CTL_EQ1.U_CTL/xsdb_reg_reg[0]/Q | u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_CHANNEL_REGS/reg_229/I_EN_CTL_EQ1.U_CTL/regSlaveDo_reg[15][0] - Static -
+| 1        | FDRE/Q          | PBlock     | SLICE_X99Y4/HFF   | X3Y0         |           1 |               1 |              |       | u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_CHANNEL_REGS/reg_229/I_EN_CTL_EQ1.U_CTL/xsdb_reg_reg[1]/Q | u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_CHANNEL_REGS/reg_229/I_EN_CTL_EQ1.U_CTL/regSlaveDo_reg[15][1] - Static -
+| 2        | FDRE/Q          | PBlock     | SLICE_X97Y23/DFF  | X3Y0         |           1 |               1 |              |       | u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_CHANNEL_REGS/reg_229/I_EN_CTL_EQ1.U_CTL/xsdb_reg_reg[0]/Q | u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_CHANNEL_REGS/reg_229/I_EN_CTL_EQ1.U_CTL/regSlaveDo_reg[15][0] - Static -
+| 3        | FDRE/Q          | PBlock     | SLICE_X96Y23/DFF  | X3Y0         |           1 |               1 |              |       | u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_CHANNEL_REGS/reg_229/I_EN_CTL_EQ1.U_CTL/xsdb_reg_reg[1]/Q | u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_CHANNEL_REGS/reg_229/I_EN_CTL_EQ1.U_CTL/regSlaveDo_reg[15][1] - Static -
+| 4        | FDRE/Q          | PBlock     | SLICE_X99Y35/HFF  | X3Y0         |           1 |               1 |              |       | u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_CHANNEL_REGS/reg_229/I_EN_CTL_EQ1.U_CTL/xsdb_reg_reg[0]/Q | u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_CHANNEL_REGS/reg_229/I_EN_CTL_EQ1.U_CTL/regSlaveDo_reg[15][0] - Static -
+| 5        | FDRE/Q          | PBlock     | SLICE_X98Y30/HFF  | X3Y0         |           1 |               1 |              |       | u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_CHANNEL_REGS/reg_229/I_EN_CTL_EQ1.U_CTL/xsdb_reg_reg[1]/Q | u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_CHANNEL_REGS/reg_229/I_EN_CTL_EQ1.U_CTL/regSlaveDo_reg[15][1] - Static -
+| 6        | FDRE/Q          | PBlock     | SLICE_X100Y46/HFF | X3Y0         |           1 |               1 |              |       | u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_CHANNEL_REGS/reg_229/I_EN_CTL_EQ1.U_CTL/xsdb_reg_reg[0]/Q | u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_CHANNEL_REGS/reg_229/I_EN_CTL_EQ1.U_CTL/regSlaveDo_reg[15][0] - Static -
+| 7        | FDRE/Q          | PBlock     | SLICE_X100Y46/DFF | X3Y0         |           1 |               1 |              |       | u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_CHANNEL_REGS/reg_229/I_EN_CTL_EQ1.U_CTL/xsdb_reg_reg[1]/Q | u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_CHANNEL_REGS/reg_229/I_EN_CTL_EQ1.U_CTL/regSlaveDo_reg[15][1] - Static -
++----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+----------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------||
+* Local Clocks in this context represents only clocks driven by non-global buffers
+** Clock Loads column represents the clock pin loads (pin count)
+*** Non-Clock Loads column represents the non-clock pin loads (pin count)
+
+
+5. Clock Regions : Clock Primitives
+-----------------------------------
+
++-------------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+|                   | Global Clock |    BUFGCE    |  BUFGCE_DIV  |   BUFGCTRL   |    BUFG_GT   |     MMCM     |      PLL     |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+| Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+| X0Y0              |    0 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X1Y0              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X2Y0              |   18 |    24 |    6 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    1 |     1 |    0 |     2 |
+| X3Y0              |   22 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |   17 |    24 |    0 |     0 |    0 |     0 |
+| X0Y1              |    0 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X1Y1              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X2Y1              |    1 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X3Y1              |    1 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
+| X0Y2              |    0 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X1Y2              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X2Y2              |    0 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X3Y2              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
+| X0Y3              |    0 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X1Y3              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X2Y3              |    0 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X3Y3              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
+| X0Y4              |    0 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X1Y4              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |
+| X2Y4              |    0 |    24 |    0 |    24 |    0 |     4 |    0 |     8 |    0 |     0 |    0 |     1 |    0 |     2 |
+| X3Y4              |    0 |    24 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |    24 |    0 |     0 |    0 |     0 |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+* Global Clock column represents track count; while other columns represents cell counts
+
+
+6. Clock Regions : Load Primitives
+----------------------------------
+
++-------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+
+|                   |   Global Clock   |        FF        |      LUTRAM      |  Block RAM (18K) |        DSP       |        GT        |      HARD IP     |
++-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
+| Clock Region Name | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   |
++-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
+| X0Y0              |      0 |      24 |      0 |   23040 |      0 |    5760 |      0 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X1Y0              |      0 |      24 |      0 |   24000 |      0 |    6240 |      0 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X2Y0              |     18 |      24 |   6337 |   25920 |    206 |    7200 |     32 |      48 |      2 |     144 |      0 |       0 |      0 |       0 |
+| X3Y0              |     22 |      24 |   9447 |   24000 |      4 |    3360 |      8 |      48 |      6 |      48 |      4 |       4 |      0 |       1 |
+| X0Y1              |      0 |      24 |      0 |   23040 |      0 |    5760 |      0 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X1Y1              |      0 |      24 |      0 |   24000 |      0 |    6240 |      0 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X2Y1              |      1 |      24 |      0 |   25920 |      0 |    7200 |      0 |      48 |      0 |     144 |      0 |       0 |      0 |       0 |
+| X3Y1              |      1 |      24 |    158 |   24000 |      0 |    3360 |      0 |      48 |      0 |      48 |      0 |       4 |      0 |       0 |
+| X0Y2              |      0 |      24 |      0 |   23040 |      0 |    5760 |      0 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X1Y2              |      0 |      24 |      0 |   24000 |      0 |    6240 |      0 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X2Y2              |      0 |      24 |      0 |   25920 |      0 |    7200 |      0 |      48 |      0 |     144 |      0 |       0 |      0 |       0 |
+| X3Y2              |      0 |      24 |      0 |   24000 |      0 |    3360 |      0 |      48 |      0 |      48 |      0 |       4 |      0 |       0 |
+| X0Y3              |      0 |      24 |      0 |   23040 |      0 |    5760 |      0 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X1Y3              |      0 |      24 |      0 |   24000 |      0 |    6240 |      0 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X2Y3              |      0 |      24 |      0 |   25920 |      0 |    7200 |      0 |      48 |      0 |     144 |      0 |       0 |      0 |       0 |
+| X3Y3              |      0 |      24 |      0 |   24000 |      0 |    3360 |      0 |      48 |      0 |      48 |      0 |       4 |      0 |       1 |
+| X0Y4              |      0 |      24 |      0 |   23040 |      0 |    5760 |      0 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X1Y4              |      0 |      24 |      0 |   24000 |      0 |    6240 |      0 |      72 |      0 |      96 |      0 |       0 |      0 |       0 |
+| X2Y4              |      0 |      24 |      0 |   25920 |      0 |    7200 |      0 |      48 |      0 |     144 |      0 |       0 |      0 |       0 |
+| X3Y4              |      0 |      24 |      0 |   24000 |      0 |    3360 |      0 |      48 |      0 |      48 |      0 |       4 |      0 |       1 |
++-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
+* Global Clock column represents track count; while other columns represents cell counts
+
+
+7. Clock Regions : Global Clock Summary
+---------------------------------------
+
+All Modules
++----+----+----+----+----+
+|    | X0 | X1 | X2 | X3 |
++----+----+----+----+----+
+| Y4 |  0 |  0 |  0 |  0 |
+| Y3 |  0 |  0 |  0 |  0 |
+| Y2 |  0 |  0 |  0 |  0 |
+| Y1 |  0 |  0 |  1 |  1 |
+| Y0 |  0 |  0 | 18 | 22 |
++----+----+----+----+----+
+
+
+8. Clock Regions : Routing Resource Utilization
+-----------------------------------------------
+
+All Modules
++-------------------+----------------------+----------------------+----------------------+----------------------+
+|                   |        HROUTES       |        HDISTRS       |        VROUTES       |        VDISTRS       |
++-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
+| Clock Region Name | Used | Avail | Util% | Used | Avail | Util% | Used | Avail | Util% | Used | Avail | Util% |
++-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
+| X0Y0              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X1Y0              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X2Y0              |    5 |    24 | 20.83 |   17 |    24 | 70.83 |    0 |    24 |  0.00 |    2 |    24 |  8.33 |
+| X3Y0              |    5 |    24 | 20.83 |   22 |    24 | 91.67 |    0 |    24 |  0.00 |    4 |    24 | 16.67 |
+| X0Y1              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X1Y1              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X2Y1              |    0 |    24 |  0.00 |    1 |    24 |  4.17 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X3Y1              |    0 |    24 |  0.00 |    1 |    24 |  4.17 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X0Y2              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X1Y2              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X2Y2              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X3Y2              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X0Y3              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X1Y3              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X2Y3              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X3Y3              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X0Y4              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X1Y4              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X2Y4              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X3Y4              |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
++-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
+
+
+9. Device Cell Placement Summary for Global Clock g0
+----------------------------------------------------
+
++-----------+-----------------+-------------------+-----------------------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                 | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                            |
++-----------+-----------------+-------------------+-----------------------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------+
+| g0        | BUFGCE/O        | X2Y0              | USE_DIVIDER.dclk_mmcm |      10.000 | {0.000 5.000} | X2Y0     |       10741 |        0 |              0 |        5 | dbg_hub/inst/BSCANID.u_xsdbm_id/sl_iport0_o[1] |
++-----------+-----------------+-------------------+-----------------------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+--------------+-------+
+|    | X0 | X1 | X2           | X3    |
++----+----+----+--------------+-------+
+| Y4 |  0 |  0 |            0 |     0 |
+| Y3 |  0 |  0 |            0 |     0 |
+| Y2 |  0 |  0 |            0 |     0 |
+| Y1 |  0 |  0 |            0 |     0 |
+| Y0 |  0 |  0 | (R) (D) 3501 |  7245 |
++----+----+----+--------------+-------+
+
+
+10. Device Cell Placement Summary for Global Clock g1
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+----------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock          | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                  |
++-----------+-----------------+-------------------+----------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+| g1        | BUFG_GT/O       | X3Y0              | rxusrclk2_i[0] |       4.000 | {0.000 2.000} | X3Y0     |         747 |        0 |              0 |        1 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk2_o[0] |
++-----------+-----------------+-------------------+----------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+------+------------+
+|    | X0 | X1 | X2   | X3         |
++----+----+----+------+------------+
+| Y4 |  0 |  0 |    0 |          0 |
+| Y3 |  0 |  0 |    0 |          0 |
+| Y2 |  0 |  0 |    0 |          0 |
+| Y1 |  0 |  0 |    0 |          0 |
+| Y0 |  0 |  0 |  702 | (R) (D) 46 |
++----+----+----+------+------------+
+
+
+11. Device Cell Placement Summary for Global Clock g2
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock         | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                 |
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+| g2        | BUFG_GT/O       | X3Y0              | rxoutclk_o[0] |       4.000 | {0.000 2.000} | X3Y0     |          22 |        0 |              0 |        1 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk_o[0] |
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+-----+-----------+
+|    | X0 | X1 | X2  | X3        |
++----+----+----+-----+-----------+
+| Y4 |  0 |  0 |   0 |         0 |
+| Y3 |  0 |  0 |   0 |         0 |
+| Y2 |  0 |  0 |   0 |         0 |
+| Y1 |  0 |  0 |   0 |         0 |
+| Y0 |  0 |  0 |  22 | (R) (D) 1 |
++----+----+----+-----+-----------+
+
+
+12. Device Cell Placement Summary for Global Clock g3
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+-------------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock             | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                  |
++-----------+-----------------+-------------------+-------------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+| g3        | BUFG_GT/O       | X3Y0              | rxusrclk2_i__0[1] |       4.000 | {0.000 2.000} | X3Y0     |         747 |        0 |              0 |        1 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk2_o[1] |
++-----------+-----------------+-------------------+-------------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+------+------------+
+|    | X0 | X1 | X2   | X3         |
++----+----+----+------+------------+
+| Y4 |  0 |  0 |    0 |          0 |
+| Y3 |  0 |  0 |    0 |          0 |
+| Y2 |  0 |  0 |    0 |          0 |
+| Y1 |  0 |  0 |    0 |          0 |
+| Y0 |  0 |  0 |  673 | (R) (D) 75 |
++----+----+----+------+------------+
+
+
+13. Device Cell Placement Summary for Global Clock g4
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock         | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                 |
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+| g4        | BUFG_GT/O       | X3Y0              | rxoutclk_o[1] |       4.000 | {0.000 2.000} | X3Y0     |          22 |        0 |              0 |        1 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk_o[1] |
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+-----+-----------+
+|    | X0 | X1 | X2  | X3        |
++----+----+----+-----+-----------+
+| Y4 |  0 |  0 |   0 |         0 |
+| Y3 |  0 |  0 |   0 |         0 |
+| Y2 |  0 |  0 |   0 |         0 |
+| Y1 |  0 |  0 |   0 |         0 |
+| Y0 |  0 |  0 |  22 | (R) (D) 1 |
++----+----+----+-----+-----------+
+
+
+14. Device Cell Placement Summary for Global Clock g5
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+----------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock          | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                  |
++-----------+-----------------+-------------------+----------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+| g5        | BUFG_GT/O       | X3Y0              | rxusrclk2_i[2] |       4.000 | {0.000 2.000} | X3Y0     |         747 |        0 |              0 |        1 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk2_o[2] |
++-----------+-----------------+-------------------+----------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+------+------------+
+|    | X0 | X1 | X2   | X3         |
++----+----+----+------+------------+
+| Y4 |  0 |  0 |    0 |          0 |
+| Y3 |  0 |  0 |    0 |          0 |
+| Y2 |  0 |  0 |    0 |          0 |
+| Y1 |  0 |  0 |    0 |          0 |
+| Y0 |  0 |  0 |  683 | (R) (D) 65 |
++----+----+----+------+------------+
+
+
+15. Device Cell Placement Summary for Global Clock g6
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock         | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                 |
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+| g6        | BUFG_GT/O       | X3Y0              | rxoutclk_o[2] |       4.000 | {0.000 2.000} | X3Y0     |          22 |        0 |              0 |        1 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk_o[2] |
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+-----+-----------+
+|    | X0 | X1 | X2  | X3        |
++----+----+----+-----+-----------+
+| Y4 |  0 |  0 |   0 |         0 |
+| Y3 |  0 |  0 |   0 |         0 |
+| Y2 |  0 |  0 |   0 |         0 |
+| Y1 |  0 |  0 |   0 |         0 |
+| Y0 |  0 |  0 |  22 | (R) (D) 1 |
++----+----+----+-----+-----------+
+
+
+16. Device Cell Placement Summary for Global Clock g7
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+-------------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock             | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                  |
++-----------+-----------------+-------------------+-------------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+| g7        | BUFG_GT/O       | X3Y0              | rxusrclk2_i__0[3] |       4.000 | {0.000 2.000} | X3Y0     |         747 |        0 |              0 |        1 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk2_o[3] |
++-----------+-----------------+-------------------+-------------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+------+-------------+
+|    | X0 | X1 | X2   | X3          |
++----+----+----+------+-------------+
+| Y4 |  0 |  0 |    0 |           0 |
+| Y3 |  0 |  0 |    0 |           0 |
+| Y2 |  0 |  0 |    0 |           0 |
+| Y1 |  0 |  0 |    0 |           0 |
+| Y0 |  0 |  0 |  647 | (R) (D) 101 |
++----+----+----+------+-------------+
+
+
+17. Device Cell Placement Summary for Global Clock g8
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock         | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                 |
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+| g8        | BUFG_GT/O       | X3Y0              | rxoutclk_o[3] |       4.000 | {0.000 2.000} | X3Y0     |          22 |        0 |              0 |        1 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk_o[3] |
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+-----+-----------+
+|    | X0 | X1 | X2  | X3        |
++----+----+----+-----+-----------+
+| Y4 |  0 |  0 |   0 |         0 |
+| Y3 |  0 |  0 |   0 |         0 |
+| Y2 |  0 |  0 |   0 |         0 |
+| Y1 |  0 |  0 |   0 |         0 |
+| Y0 |  0 |  0 |  22 | (R) (D) 1 |
++----+----+----+-----+-----------+
+
+
+18. Device Cell Placement Summary for Global Clock g9
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+--------------------------------------------------------------------------------------------+-------------+----------------+----------+-------------+----------+----------------+----------+----------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                                                                                      | Period (ns) | Waveform (ns)  | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                    |
++-----------+-----------------+-------------------+--------------------------------------------------------------------------------------------+-------------+----------------+----------+-------------+----------+----------------+----------+----------------------------------------+
+| g9        | BUFGCE/O        | X2Y0              | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK |      33.000 | {0.000 16.500} | X2Y0     |         471 |        0 |              0 |        0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i |
++-----------+-----------------+-------------------+--------------------------------------------------------------------------------------------+-------------+----------------+----------+-------------+----------+----------------+----------+----------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+-------------+------+
+|    | X0 | X1 | X2          | X3   |
++----+----+----+-------------+------+
+| Y4 |  0 |  0 |           0 |    0 |
+| Y3 |  0 |  0 |           0 |    0 |
+| Y2 |  0 |  0 |           0 |    0 |
+| Y1 |  0 |  0 |           0 |  158 |
+| Y0 |  0 |  0 | (R) (D) 130 |  183 |
++----+----+----+-------------+------+
+
+
+19. Device Cell Placement Summary for Global Clock g10
+------------------------------------------------------
+
++-----------+-----------------+-------------------+----------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock          | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                  |
++-----------+-----------------+-------------------+----------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+| g10       | BUFG_GT/O       | X3Y0              | txusrclk2_i[0] |       4.000 | {0.000 2.000} | X3Y0     |         407 |        0 |              0 |        1 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk2_o[0] |
++-----------+-----------------+-------------------+----------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+-----+-------------+
+|    | X0 | X1 | X2  | X3          |
++----+----+----+-----+-------------+
+| Y4 |  0 |  0 |   0 |           0 |
+| Y3 |  0 |  0 |   0 |           0 |
+| Y2 |  0 |  0 |   0 |           0 |
+| Y1 |  0 |  0 |   0 |           0 |
+| Y0 |  0 |  0 |  27 | (R) (D) 381 |
++----+----+----+-----+-------------+
+
+
+20. Device Cell Placement Summary for Global Clock g11
+------------------------------------------------------
+
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock         | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                 |
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+| g11       | BUFG_GT/O       | X3Y0              | txoutclk_o[0] |       4.000 | {0.000 2.000} | X3Y0     |          22 |        0 |              0 |        1 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk_o[0] |
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+-----+-----------+
+|    | X0 | X1 | X2  | X3        |
++----+----+----+-----+-----------+
+| Y4 |  0 |  0 |   0 |         0 |
+| Y3 |  0 |  0 |   0 |         0 |
+| Y2 |  0 |  0 |   0 |         0 |
+| Y1 |  0 |  0 |   0 |         0 |
+| Y0 |  0 |  0 |  22 | (R) (D) 1 |
++----+----+----+-----+-----------+
+
+
+21. Device Cell Placement Summary for Global Clock g12
+------------------------------------------------------
+
++-----------+-----------------+-------------------+-------------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock             | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                  |
++-----------+-----------------+-------------------+-------------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+| g12       | BUFG_GT/O       | X3Y0              | txusrclk2_i__0[1] |       4.000 | {0.000 2.000} | X3Y0     |         407 |        0 |              0 |        1 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk2_o[1] |
++-----------+-----------------+-------------------+-------------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+----+-------------+
+|    | X0 | X1 | X2 | X3          |
++----+----+----+----+-------------+
+| Y4 |  0 |  0 |  0 |           0 |
+| Y3 |  0 |  0 |  0 |           0 |
+| Y2 |  0 |  0 |  0 |           0 |
+| Y1 |  0 |  0 |  0 |           0 |
+| Y0 |  0 |  0 |  0 | (R) (D) 408 |
++----+----+----+----+-------------+
+
+
+22. Device Cell Placement Summary for Global Clock g13
+------------------------------------------------------
+
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock         | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                 |
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+| g13       | BUFG_GT/O       | X3Y0              | txoutclk_o[1] |       4.000 | {0.000 2.000} | X3Y0     |          22 |        0 |              0 |        1 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk_o[1] |
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+-----+-----------+
+|    | X0 | X1 | X2  | X3        |
++----+----+----+-----+-----------+
+| Y4 |  0 |  0 |   0 |         0 |
+| Y3 |  0 |  0 |   0 |         0 |
+| Y2 |  0 |  0 |   0 |         0 |
+| Y1 |  0 |  0 |   0 |         0 |
+| Y0 |  0 |  0 |  22 | (R) (D) 1 |
++----+----+----+-----+-----------+
+
+
+23. Device Cell Placement Summary for Global Clock g14
+------------------------------------------------------
+
++-----------+-----------------+-------------------+----------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock          | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                  |
++-----------+-----------------+-------------------+----------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+| g14       | BUFG_GT/O       | X3Y0              | txusrclk2_i[2] |       4.000 | {0.000 2.000} | X3Y0     |         407 |        0 |              0 |        1 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk2_o[2] |
++-----------+-----------------+-------------------+----------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+----+-------------+
+|    | X0 | X1 | X2 | X3          |
++----+----+----+----+-------------+
+| Y4 |  0 |  0 |  0 |           0 |
+| Y3 |  0 |  0 |  0 |           0 |
+| Y2 |  0 |  0 |  0 |           0 |
+| Y1 |  0 |  0 |  0 |           0 |
+| Y0 |  0 |  0 |  0 | (R) (D) 408 |
++----+----+----+----+-------------+
+
+
+24. Device Cell Placement Summary for Global Clock g15
+------------------------------------------------------
+
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock         | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                 |
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+| g15       | BUFG_GT/O       | X3Y0              | txoutclk_o[2] |       4.000 | {0.000 2.000} | X3Y0     |          22 |        0 |              0 |        1 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk_o[2] |
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+-----+-----------+
+|    | X0 | X1 | X2  | X3        |
++----+----+----+-----+-----------+
+| Y4 |  0 |  0 |   0 |         0 |
+| Y3 |  0 |  0 |   0 |         0 |
+| Y2 |  0 |  0 |   0 |         0 |
+| Y1 |  0 |  0 |   0 |         0 |
+| Y0 |  0 |  0 |  22 | (R) (D) 1 |
++----+----+----+-----+-----------+
+
+
+25. Device Cell Placement Summary for Global Clock g16
+------------------------------------------------------
+
++-----------+-----------------+-------------------+-------------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock             | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                  |
++-----------+-----------------+-------------------+-------------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+| g16       | BUFG_GT/O       | X3Y0              | txusrclk2_i__0[3] |       4.000 | {0.000 2.000} | X3Y0     |         407 |        0 |              0 |        1 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk2_o[3] |
++-----------+-----------------+-------------------+-------------------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+-----+-------------+
+|    | X0 | X1 | X2  | X3          |
++----+----+----+-----+-------------+
+| Y4 |  0 |  0 |   0 |           0 |
+| Y3 |  0 |  0 |   0 |           0 |
+| Y2 |  0 |  0 |   0 |           0 |
+| Y1 |  0 |  0 |   0 |           0 |
+| Y0 |  0 |  0 |  22 | (R) (D) 386 |
++----+----+----+-----+-------------+
+
+
+26. Device Cell Placement Summary for Global Clock g17
+------------------------------------------------------
+
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock         | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                 |
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+| g17       | BUFG_GT/O       | X3Y0              | txoutclk_o[3] |       4.000 | {0.000 2.000} | X3Y0     |          22 |        0 |              0 |        1 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk_o[3] |
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+---------------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+-----+-----------+
+|    | X0 | X1 | X2  | X3        |
++----+----+----+-----+-----------+
+| Y4 |  0 |  0 |   0 |         0 |
+| Y3 |  0 |  0 |   0 |         0 |
+| Y2 |  0 |  0 |   0 |         0 |
+| Y1 |  0 |  0 |   0 |         0 |
+| Y0 |  0 |  0 |  22 | (R) (D) 1 |
++----+----+----+-----+-----------+
+
+
+27. Device Cell Placement Summary for Global Clock g18
+------------------------------------------------------
+
++-----------+-----------------+-------------------+------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                                                                        | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                        |
++-----------+-----------------+-------------------+------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------+
+| g18       | BUFGCE/O        | X2Y0              | u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/u_gthe3_channel/DMONITOROUT[16] |       4.000 | {0.000 2.000} | X3Y0     |          44 |        0 |              0 |        1 | u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/dmonitorclk_o |
++-----------+-----------------+-------------------+------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+--------+--------+
+|    | X0 | X1 | X2     | X3     |
++----+----+----+--------+--------+
+| Y4 |  0 |  0 |      0 |      0 |
+| Y3 |  0 |  0 |      0 |      0 |
+| Y2 |  0 |  0 |      0 |      0 |
+| Y1 |  0 |  0 |      0 |      0 |
+| Y0 |  0 |  0 |  (D) 0 | (R) 45 |
++----+----+----+--------+--------+
+
+
+28. Device Cell Placement Summary for Global Clock g19
+------------------------------------------------------
+
++-----------+-----------------+-------------------+------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                                                                        | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                        |
++-----------+-----------------+-------------------+------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------+
+| g19       | BUFGCE/O        | X2Y0              | u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/u_gthe3_channel/DMONITOROUT[16] |       4.000 | {0.000 2.000} | X3Y0     |          44 |        0 |              0 |        1 | u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/dmonitorclk_o |
++-----------+-----------------+-------------------+------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+--------+--------+
+|    | X0 | X1 | X2     | X3     |
++----+----+----+--------+--------+
+| Y4 |  0 |  0 |      0 |      0 |
+| Y3 |  0 |  0 |      0 |      0 |
+| Y2 |  0 |  0 |      0 |      0 |
+| Y1 |  0 |  0 |      0 |      0 |
+| Y0 |  0 |  0 |  (D) 0 | (R) 45 |
++----+----+----+--------+--------+
+
+
+29. Device Cell Placement Summary for Global Clock g20
+------------------------------------------------------
+
++-----------+-----------------+-------------------+------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                                                                        | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                        |
++-----------+-----------------+-------------------+------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------+
+| g20       | BUFGCE/O        | X2Y0              | u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/u_gthe3_channel/DMONITOROUT[16] |       4.000 | {0.000 2.000} | X3Y0     |          44 |        0 |              0 |        1 | u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/dmonitorclk_o |
++-----------+-----------------+-------------------+------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+--------+--------+
+|    | X0 | X1 | X2     | X3     |
++----+----+----+--------+--------+
+| Y4 |  0 |  0 |      0 |      0 |
+| Y3 |  0 |  0 |      0 |      0 |
+| Y2 |  0 |  0 |      0 |      0 |
+| Y1 |  0 |  0 |      0 |      0 |
+| Y0 |  0 |  0 |  (D) 0 | (R) 45 |
++----+----+----+--------+--------+
+
+
+30. Device Cell Placement Summary for Global Clock g21
+------------------------------------------------------
+
++-----------+-----------------+-------------------+------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                                                                        | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                        |
++-----------+-----------------+-------------------+------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------+
+| g21       | BUFGCE/O        | X2Y0              | u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/u_gthe3_channel/DMONITOROUT[16] |       4.000 | {0.000 2.000} | X3Y0     |          44 |        0 |              0 |        1 | u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/dmonitorclk_o |
++-----------+-----------------+-------------------+------------------------------------------------------------------------------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+--------+--------+
+|    | X0 | X1 | X2     | X3     |
++----+----+----+--------+--------+
+| Y4 |  0 |  0 |      0 |      0 |
+| Y3 |  0 |  0 |      0 |      0 |
+| Y2 |  0 |  0 |      0 |      0 |
+| Y1 |  0 |  0 |      0 |      0 |
+| Y0 |  0 |  0 |  (D) 0 | (R) 45 |
++----+----+----+--------+--------+
+
+
+31. Device Cell Placement Summary for Global Clock g22
+------------------------------------------------------
+
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+--------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock         | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net          |
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+--------------+
+| g22       | BUFG_GT/O       | X3Y0              | gth_refclk0_0 |       8.000 | {0.000 4.000} | X2Y0     |           0 |        0 |              1 |        0 | gth_sysclk_i |
++-----------+-----------------+-------------------+---------------+-------------+---------------+----------+-------------+----------+----------------+----------+--------------+
+* Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+-------+--------+
+|    | X0 | X1 | X2    | X3     |
++----+----+----+-------+--------+
+| Y4 |  0 |  0 |     0 |      0 |
+| Y3 |  0 |  0 |     0 |      0 |
+| Y2 |  0 |  0 |     0 |      0 |
+| Y1 |  0 |  0 |     0 |      0 |
+| Y0 |  0 |  0 | (R) 1 |  (D) 0 |
++----+----+----+-------+--------+
+
+
+32. Clock Region Cell Placement per Global Clock: Region X2Y0
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                  |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------+
+| g0        | 10    | BUFGCE/O        | None       |        3501 |               0 | 3439 |     46 |   16 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/sl_iport0_o[1]                       |
+| g1        | 14    | BUFG_GT/O       | PBlock     |         702 |               0 |  661 |     40 |    0 |   1 |  0 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk2_o[0] |
+| g3        | 12    | BUFG_GT/O       | PBlock     |         673 |               0 |  633 |     40 |    0 |   0 |  0 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk2_o[1] |
+| g5        | 20    | BUFG_GT/O       | PBlock     |         683 |               0 |  643 |     40 |    0 |   0 |  0 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk2_o[2] |
+| g7        | 18    | BUFG_GT/O       | PBlock     |         647 |               0 |  606 |     40 |    0 |   1 |  0 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk2_o[3] |
+| g9        | 5     | BUFGCE/O        | None       |         130 |               0 |  130 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                               |
+| g10       | 21    | BUFG_GT/O       | PBlock     |          27 |               0 |   27 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk2_o[0] |
+| g16       | 6     | BUFG_GT/O       | PBlock     |          22 |               0 |   22 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk2_o[3] |
+| g18+      | 0     | BUFGCE/O        | PBlock     |           0 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/dmonitorclk_o           |
+| g19+      | 1     | BUFGCE/O        | PBlock     |           0 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/dmonitorclk_o           |
+| g20+      | 2     | BUFGCE/O        | PBlock     |           0 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/dmonitorclk_o           |
+| g21+      | 3     | BUFGCE/O        | PBlock     |           0 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/dmonitorclk_o           |
+| g2        | 15    | BUFG_GT/O       | PBlock     |          22 |               0 |   22 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk_o[0]  |
+| g4        | 13    | BUFG_GT/O       | PBlock     |          22 |               0 |   22 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk_o[1]  |
+| g6        | 16    | BUFG_GT/O       | PBlock     |          22 |               0 |   22 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk_o[2]  |
+| g8        | 19    | BUFG_GT/O       | PBlock     |          22 |               0 |   22 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk_o[3]  |
+| g11       | 22    | BUFG_GT/O       | PBlock     |          22 |               0 |   22 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk_o[0]  |
+| g13       | 23    | BUFG_GT/O       | PBlock     |          22 |               0 |   22 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk_o[1]  |
+| g15       | 4     | BUFG_GT/O       | PBlock     |          22 |               0 |   22 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk_o[2]  |
+| g17       | 7     | BUFG_GT/O       | PBlock     |          22 |               0 |   22 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk_o[3]  |
+| g22       | 9     | BUFG_GT/O       | None       |           0 |               1 |    0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | gth_sysclk_i                                                         |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+**** In Global Id column, sympbol '+' indicates that global clock was used only to route through the clock region.
+
+
+33. Clock Region Cell Placement per Global Clock: Region X3Y0
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                  |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------+
+| g0        | 10    | BUFGCE/O        | None       |        7245 |               0 | 7236 |      0 |    4 |   0 |  4 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/sl_iport0_o[1]                       |
+| g1        | 14    | BUFG_GT/O       | PBlock     |          46 |               0 |   44 |      0 |    0 |   1 |  1 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk2_o[0] |
+| g3        | 12    | BUFG_GT/O       | PBlock     |          75 |               0 |   72 |      0 |    0 |   2 |  1 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk2_o[1] |
+| g5        | 20    | BUFG_GT/O       | PBlock     |          65 |               0 |   62 |      0 |    0 |   2 |  1 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk2_o[2] |
+| g7        | 18    | BUFG_GT/O       | PBlock     |         101 |               0 |   99 |      0 |    0 |   1 |  1 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk2_o[3] |
+| g9        | 5     | BUFGCE/O        | None       |         183 |               0 |  183 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i                               |
+| g10       | 21    | BUFG_GT/O       | PBlock     |         381 |               0 |  380 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk2_o[0] |
+| g12       | 17    | BUFG_GT/O       | PBlock     |         408 |               0 |  407 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk2_o[1] |
+| g14       | 8     | BUFG_GT/O       | PBlock     |         408 |               0 |  407 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk2_o[2] |
+| g16       | 6     | BUFG_GT/O       | PBlock     |         386 |               0 |  385 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk2_o[3] |
+| g18       | 0     | BUFGCE/O        | PBlock     |          45 |               0 |   43 |      1 |    0 |   0 |  1 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/dmonitorclk_o           |
+| g19       | 1     | BUFGCE/O        | PBlock     |          45 |               0 |   43 |      1 |    0 |   0 |  1 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/dmonitorclk_o           |
+| g20       | 2     | BUFGCE/O        | PBlock     |          45 |               0 |   43 |      1 |    0 |   0 |  1 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/dmonitorclk_o           |
+| g21       | 3     | BUFGCE/O        | PBlock     |          45 |               0 |   43 |      1 |    0 |   0 |  1 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/dmonitorclk_o           |
+| g2        | 15    | BUFG_GT/O       | PBlock     |           1 |               0 |    0 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk_o[0]  |
+| g4        | 13    | BUFG_GT/O       | PBlock     |           1 |               0 |    0 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk_o[1]  |
+| g6        | 16    | BUFG_GT/O       | PBlock     |           1 |               0 |    0 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk_o[2]  |
+| g8        | 19    | BUFG_GT/O       | PBlock     |           1 |               0 |    0 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk_o[3]  |
+| g11       | 22    | BUFG_GT/O       | PBlock     |           1 |               0 |    0 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk_o[0]  |
+| g13       | 23    | BUFG_GT/O       | PBlock     |           1 |               0 |    0 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk_o[1]  |
+| g15       | 4     | BUFG_GT/O       | PBlock     |           1 |               0 |    0 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk_o[2]  |
+| g17       | 7     | BUFG_GT/O       | PBlock     |           1 |               0 |    0 |      0 |    0 |   0 |  1 |    0 |   0 |       0 | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk_o[3]  |
+| g22+      | 9     | BUFG_GT/O       | None       |           0 |               0 |    0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | gth_sysclk_i                                                         |
++-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+**** In Global Id column, sympbol '+' indicates that global clock was used only to route through the clock region.
+
+
+34. Clock Region Cell Placement per Global Clock: Region X2Y1
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+----------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                    |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+----------------------------------------+
+| g9+       | 5     | BUFGCE/O        | None       |           0 |               0 |  0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+----------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+**** In Global Id column, sympbol '+' indicates that global clock was used only to route through the clock region.
+
+
+35. Clock Region Cell Placement per Global Clock: Region X3Y1
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+----------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                    |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+----------------------------------------+
+| g9        | 5     | BUFGCE/O        | None       |         158 |               0 | 158 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i |
++-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+----------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+

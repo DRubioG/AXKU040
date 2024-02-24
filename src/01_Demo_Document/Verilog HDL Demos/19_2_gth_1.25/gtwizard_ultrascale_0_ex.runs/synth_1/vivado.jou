@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Jul 13 13:57:47 2022
+# Process ID: 4792
+# Current directory: e:/ax/ku040/gtwizard_ultrascale_0_ex/gtwizard_ultrascale_0_ex.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: e:/ax/ku040/gtwizard_ultrascale_0_ex/gtwizard_ultrascale_0_ex.runs/synth_1/top.vds
+# Journal file: e:/ax/ku040/gtwizard_ultrascale_0_ex/gtwizard_ultrascale_0_ex.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace

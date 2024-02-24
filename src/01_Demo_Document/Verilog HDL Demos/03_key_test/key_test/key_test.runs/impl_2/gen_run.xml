@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_2" LaunchPart="xcku040-ffva1156-2-i" LaunchTime="1625566172">
+  <File Type="PWROPT-DCP" Name="key_test_pwropt.dcp"/>
+  <File Type="PA-TCL" Name="key_test.tcl"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="key_test_postplace_pwropt.dcp"/>
+  <File Type="REPORTS-TCL" Name="key_test_reports.tcl"/>
+  <File Type="BG-DRC" Name="key_test.drc"/>
+  <File Type="OPT-DCP" Name="key_test_opt.dcp"/>
+  <File Type="OPT-HWDEF" Name="key_test.hwdef"/>
+  <File Type="PLACE-DCP" Name="key_test_placed.dcp"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="key_test_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="key_test_physopt.dcp"/>
+  <File Type="BG-BIT" Name="key_test.bit"/>
+  <File Type="ROUTE-ERROR-DCP" Name="key_test_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="key_test_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="key_test_routed_bb.dcp"/>
+  <File Type="BITSTR-MSK" Name="key_test.msk"/>
+  <File Type="BG-BGN" Name="key_test.bgn"/>
+  <File Type="BITSTR-RBT" Name="key_test.rbt"/>
+  <File Type="BG-BIN" Name="key_test.bin"/>
+  <File Type="ROUTE-TIMING-PB" Name="key_test_timing_summary_routed.pb"/>
+  <File Type="RDI-RDI" Name="key_test.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="key_test_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="key_test_postroute_physopt_bb.dcp"/>
+  <File Type="BITSTR-NKY" Name="key_test.nky"/>
+  <File Type="BITSTR-BMM" Name="key_test_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="key_test.mmi"/>
+  <File Type="BITSTR-LTX" Name="key_test.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="key_test.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../../AX7325_CD_20201209/demo/02_key_test/key_test/src/key_test.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="key_test"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../../AX7325_CD_20201209/demo/02_key_test/key_test/constrs_1/new/key.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

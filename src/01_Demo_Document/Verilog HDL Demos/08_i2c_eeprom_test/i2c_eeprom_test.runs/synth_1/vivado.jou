@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Apr 21 15:52:55 2021
+# Process ID: 43220
+# Current directory: D:/xilinx_fpga/ku040/eeprom/eeprom/eeprom.runs/synth_1
+# Command line: vivado.exe -log i2c_eeprom_test.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source i2c_eeprom_test.tcl
+# Log file: D:/xilinx_fpga/ku040/eeprom/eeprom/eeprom.runs/synth_1/i2c_eeprom_test.vds
+# Journal file: D:/xilinx_fpga/ku040/eeprom/eeprom/eeprom.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source i2c_eeprom_test.tcl -notrace

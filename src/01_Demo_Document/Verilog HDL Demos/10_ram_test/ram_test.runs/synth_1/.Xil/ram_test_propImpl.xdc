@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:D:/ax/ax7035/demo/08_ram_test/ram_test.srcs/constrs_1/new/ram.xdc rfile:../../../ram_test.srcs/constrs_1/new/ram.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AK17 [get_ports {sys_clk_p}]
+set_property src_info {type:XDC file:1 line:11 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AK8 [get_ports {rst_n}]

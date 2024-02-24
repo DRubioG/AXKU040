@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sat Jul 17 13:58:29 2021
+# Process ID: 25952
+# Current directory: D:/ax/ax7035/demo/08_ram_test/ram_test.runs/synth_1
+# Command line: vivado.exe -log ram_test.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ram_test.tcl
+# Log file: D:/ax/ax7035/demo/08_ram_test/ram_test.runs/synth_1/ram_test.vds
+# Journal file: D:/ax/ax7035/demo/08_ram_test/ram_test.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ram_test.tcl -notrace

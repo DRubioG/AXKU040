@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:E:/ax/ku040/rom_test/rom_test.srcs/constrs_1/new/rom.xdc rfile:../../../rom_test.srcs/constrs_1/new/rom.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:10 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AK17 [get_ports sys_clk_p]
+set_property src_info {type:XDC file:1 line:14 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AK8 [get_ports {rst_n}]

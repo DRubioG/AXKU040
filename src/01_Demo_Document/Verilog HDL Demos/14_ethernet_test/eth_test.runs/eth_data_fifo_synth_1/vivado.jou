@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Apr 13 16:48:38 2021
+# Process ID: 4556
+# Current directory: E:/XilinxPrj/AXU7EV/eth_logic_ku040_full/eth_test.runs/eth_data_fifo_synth_1
+# Command line: vivado.exe -log eth_data_fifo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source eth_data_fifo.tcl
+# Log file: E:/XilinxPrj/AXU7EV/eth_logic_ku040_full/eth_test.runs/eth_data_fifo_synth_1/eth_data_fifo.vds
+# Journal file: E:/XilinxPrj/AXU7EV/eth_logic_ku040_full/eth_test.runs/eth_data_fifo_synth_1\vivado.jou
+#-----------------------------------------------------------
+source eth_data_fifo.tcl -notrace

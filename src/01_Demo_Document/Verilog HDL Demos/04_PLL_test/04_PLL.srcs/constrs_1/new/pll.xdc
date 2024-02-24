@@ -1,0 +1,6 @@
+set_property PACKAGE_PIN AB24 [get_ports clk_out]
+set_property PACKAGE_PIN K21 [get_ports rst_n]
+set_property PACKAGE_PIN AK17 [get_ports sys_clk_p]
+set_property IOSTANDARD LVCMOS18 [get_ports clk_out]
+set_property IOSTANDARD LVCMOS18 [get_ports rst_n]
+set_property IOSTANDARD DIFF_SSTL12 [get_ports sys_clk_p]

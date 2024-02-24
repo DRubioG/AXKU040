@@ -1,0 +1,1331 @@
+
+*** Running vivado
+    with args -log example_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source example_top.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source example_top.tcl -notrace
+Command: synth_design -top example_top -part xcku040-ffva1156-2-i
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku040'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 54992 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 447.074 ; gain = 84.098
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'example_top' [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/example_top.sv:86]
+	Parameter nCK_PER_CLK bound to: 4 - type: integer 
+	Parameter APP_DATA_WIDTH bound to: 512 - type: integer 
+	Parameter APP_MASK_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXI_NBURST_SUPPORT bound to: 0 - type: integer 
+	Parameter SIMULATION bound to: FALSE - type: string 
+	Parameter APP_ADDR_WIDTH bound to: 29 - type: integer 
+	Parameter MEM_ADDR_ORDER bound to: ROW_COLUMN_BANK - type: string 
+	Parameter DBG_WR_STS_WIDTH bound to: 32 - type: integer 
+	Parameter DBG_RD_STS_WIDTH bound to: 32 - type: integer 
+	Parameter ECC bound to: OFF - type: string 
+INFO: [Synth 8-638] synthesizing module 'IBUFDS' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:19483]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: FALSE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUFDS' (1#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:19483]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (2#1) [C:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-638] synthesizing module 'ddr4_0' [e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/realtime/ddr4_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'ddr4_0' (3#1) [e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/realtime/ddr4_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ddr4_v2_2_3_axi_tg_top' [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_tg_top.sv:69]
+	Parameter SIMULATION bound to: FALSE - type: string 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter TCQ bound to: 0 - type: integer 
+	Parameter C_AXI_NBURST_SUPPORT bound to: 0 - type: integer 
+	Parameter APP_DATA_WIDTH bound to: 512 - type: integer 
+	Parameter ECC bound to: OFF - type: string 
+	Parameter C_DATA_PATTERN_PRBS bound to: 3'b001 
+	Parameter C_DATA_PATTERN_WALKING0 bound to: 3'b010 
+	Parameter C_DATA_PATTERN_WALKING1 bound to: 3'b011 
+	Parameter C_DATA_PATTERN_ALL_F bound to: 3'b100 
+	Parameter C_DATA_PATTERN_ALL_0 bound to: 3'b101 
+	Parameter C_DATA_PATTERN_A5A5 bound to: 3'b110 
+	Parameter C_STRB_PATTERN_DEFAULT bound to: 3'b001 
+	Parameter C_STRB_PATTERN_WALKING1 bound to: 3'b010 
+	Parameter C_STRB_PATTERN_WALKING0 bound to: 3'b011 
+	Parameter C_AXI_BURST_FIXED bound to: 2'b00 
+	Parameter C_AXI_BURST_INCR bound to: 2'b01 
+	Parameter C_AXI_BURST_WRAP bound to: 2'b10 
+	Parameter C_WSTRB_WIDTH_LOG2 bound to: 3 - type: integer 
+	Parameter SEND_NBURST bound to: 1 - type: integer 
+	Parameter C_TG_WATCH_DOG_MAX_CNT bound to: 16'b1111111111111111 
+INFO: [Synth 8-638] synthesizing module 'ddr4_v2_2_3_boot_mode_gen' [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_boot_mode_gen.sv:66]
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_STRB_PATTERN_DEFAULT bound to: 3'b001 
+	Parameter C_STRB_PATTERN_WALKING1 bound to: 3'b010 
+	Parameter C_STRB_PATTERN_WALKING0 bound to: 3'b011 
+	Parameter C_AXI_BURST_FIXED bound to: 2'b00 
+	Parameter C_AXI_BURST_INCR bound to: 2'b01 
+	Parameter C_AXI_BURST_WRAP bound to: 2'b10 
+	Parameter SEND_NBURST bound to: 1 - type: integer 
+	Parameter TCQ bound to: 0 - type: integer 
+	Parameter C_AXI_BURST_SIZE_MAX bound to: 3'b011 
+	Parameter C_AXI_BURST_SIZE_MIN bound to: 3'b000 
+	Parameter C_INSTRUCTION_MEM_WIDTH bound to: 70 - type: integer 
+	Parameter C_INSTRUCTION_MEM_DEPTH bound to: 6 - type: integer 
+	Parameter C_LEN_INCR_BY_ONE bound to: 2'b00 
+	Parameter C_LEN_INCR_MUL_2 bound to: 2'b01 
+	Parameter TG_INSTR_START bound to: 4'b0000 
+	Parameter TG_INSTR_LOAD bound to: 4'b0001 
+	Parameter TG_INSTR_EXE bound to: 4'b0010 
+	Parameter TG_INSTR_WAIT bound to: 4'b0011 
+	Parameter TG_INSTR_DONE bound to: 4'b0100 
+INFO: [Synth 8-226] default block is never used [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_boot_mode_gen.sv:246]
+INFO: [Synth 8-226] default block is never used [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_boot_mode_gen.sv:262]
+INFO: [Synth 8-155] case statement is not full and has no default [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_boot_mode_gen.sv:306]
+WARNING: [Synth 8-6014] Unused sequential element size_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_boot_mode_gen.sv:247]
+INFO: [Synth 8-256] done synthesizing module 'ddr4_v2_2_3_boot_mode_gen' (4#1) [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_boot_mode_gen.sv:66]
+INFO: [Synth 8-638] synthesizing module 'ddr4_v2_2_3_prbs_mode_gen' [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_prbs_mode_gen.sv:66]
+	Parameter SIMULATION bound to: FALSE - type: string 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_STRB_PATTERN_DEFAULT bound to: 3'b001 
+	Parameter C_STRB_PATTERN_WALKING1 bound to: 3'b010 
+	Parameter C_STRB_PATTERN_WALKING0 bound to: 3'b011 
+	Parameter C_AXI_BURST_FIXED bound to: 2'b00 
+	Parameter C_AXI_BURST_INCR bound to: 2'b01 
+	Parameter C_AXI_BURST_WRAP bound to: 2'b10 
+	Parameter SEND_NBURST bound to: 1 - type: integer 
+	Parameter TCQ bound to: 0 - type: integer 
+	Parameter C_WSTRB_WIDTH_LOG2 bound to: 3 - type: integer 
+INFO: [Synth 8-226] default block is never used [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_prbs_mode_gen.sv:230]
+INFO: [Synth 8-226] default block is never used [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_prbs_mode_gen.sv:247]
+WARNING: [Synth 8-3936] Found unconnected internal register 'prbs_reg' and it is trimmed from '64' to '50' bits. [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_prbs_mode_gen.sv:224]
+INFO: [Synth 8-256] done synthesizing module 'ddr4_v2_2_3_prbs_mode_gen' (5#1) [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_prbs_mode_gen.sv:66]
+INFO: [Synth 8-638] synthesizing module 'ddr4_v2_2_3_custom_mode_gen' [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_custom_mode_gen.sv:67]
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_STRB_PATTERN_DEFAULT bound to: 3'b001 
+	Parameter C_STRB_PATTERN_WALKING1 bound to: 3'b010 
+	Parameter C_STRB_PATTERN_WALKING0 bound to: 3'b011 
+	Parameter C_AXI_BURST_FIXED bound to: 2'b00 
+	Parameter C_AXI_BURST_INCR bound to: 2'b01 
+	Parameter C_AXI_BURST_WRAP bound to: 2'b10 
+	Parameter SEND_NBURST bound to: 1 - type: integer 
+	Parameter TCQ bound to: 0 - type: integer 
+	Parameter C_AXI_BURST_SIZE_MAX bound to: 3'b011 
+	Parameter C_AXI_BURST_SIZE_MIN bound to: 3'b000 
+	Parameter C_INSTRUCTION_MEM_WIDTH bound to: 57 - type: integer 
+	Parameter C_INSTRUCTION_MEM_DEPTH bound to: 8 - type: integer 
+WARNING: [Synth 8-3936] Found unconnected internal register 'instr_pointer_r_reg' and it is trimmed from '8' to '3' bits. [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_custom_mode_gen.sv:173]
+INFO: [Synth 8-256] done synthesizing module 'ddr4_v2_2_3_custom_mode_gen' (6#1) [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_custom_mode_gen.sv:67]
+INFO: [Synth 8-638] synthesizing module 'ddr4_v2_2_3_axi_opcode_gen' [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_opcode_gen.sv:67]
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_DATA_PATTERN_PRBS bound to: 3'b001 
+	Parameter C_DATA_PATTERN_WALKING0 bound to: 3'b010 
+	Parameter C_DATA_PATTERN_WALKING1 bound to: 3'b011 
+	Parameter C_DATA_PATTERN_ALL_F bound to: 3'b100 
+	Parameter C_DATA_PATTERN_ALL_0 bound to: 3'b101 
+	Parameter C_DATA_PATTERN_A5A5 bound to: 3'b110 
+	Parameter C_STRB_PATTERN_DEFAULT bound to: 3'b001 
+	Parameter C_STRB_PATTERN_WALKING1 bound to: 3'b010 
+	Parameter C_STRB_PATTERN_WALKING0 bound to: 3'b011 
+	Parameter APP_DATA_WIDTH bound to: 512 - type: integer 
+	Parameter C_AXI_NBURST_SUPPORT bound to: 0 - type: integer 
+	Parameter SEND_NBURST bound to: 1 - type: integer 
+	Parameter TCQ bound to: 0 - type: integer 
+	Parameter ECC bound to: OFF - type: string 
+	Parameter TG_OPCODE_GEN_IDLE bound to: 4'b0000 
+	Parameter TG_OPCODE_GEN_LOAD bound to: 4'b0001 
+	Parameter TG_OPCODE_GEN_WRITE_SIMPLE bound to: 4'b0010 
+	Parameter TG_OPCODE_GEN_WRITE_A5A5 bound to: 4'b0011 
+	Parameter TG_OPCODE_GEN_WRITE_A5A5_ALIGNED_ADDR bound to: 4'b0100 
+	Parameter TG_OPCODE_GEN_READ_SIMPLE bound to: 4'b0101 
+	Parameter TG_OPCODE_GEN_READ_BG bound to: 4'b0110 
+	Parameter TG_OPCODE_GEN_DONE bound to: 4'b0111 
+INFO: [Synth 8-226] default block is never used [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_opcode_gen.sv:199]
+INFO: [Synth 8-226] default block is never used [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_opcode_gen.sv:220]
+INFO: [Synth 8-226] default block is never used [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_opcode_gen.sv:240]
+INFO: [Synth 8-226] default block is never used [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_opcode_gen.sv:255]
+INFO: [Synth 8-155] case statement is not full and has no default [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_opcode_gen.sv:320]
+INFO: [Synth 8-638] synthesizing module 'ddr4_v2_2_3_axi_wrapper' [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_wrapper.sv:70]
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_DATA_PATTERN_PRBS bound to: 3'b001 
+	Parameter C_DATA_PATTERN_WALKING0 bound to: 3'b010 
+	Parameter C_DATA_PATTERN_WALKING1 bound to: 3'b011 
+	Parameter C_DATA_PATTERN_ALL_F bound to: 3'b100 
+	Parameter C_DATA_PATTERN_ALL_0 bound to: 3'b101 
+	Parameter C_DATA_PATTERN_A5A5 bound to: 3'b110 
+	Parameter C_STRB_PATTERN_DEFAULT bound to: 3'b001 
+	Parameter C_STRB_PATTERN_WALKING1 bound to: 3'b010 
+	Parameter C_STRB_PATTERN_WALKING0 bound to: 3'b011 
+	Parameter TCQ bound to: 0 - type: integer 
+	Parameter C_WLEN_COUNT_WIDTH bound to: 9 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'ddr4_v2_2_3_data_gen' [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_data_gen.sv:71]
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_WSTRB_WIDTH bound to: 8 - type: integer 
+	Parameter C_DATA_PATTERN_PRBS bound to: 3'b001 
+	Parameter C_DATA_PATTERN_WALKING0 bound to: 3'b010 
+	Parameter C_DATA_PATTERN_WALKING1 bound to: 3'b011 
+	Parameter C_DATA_PATTERN_ALL_F bound to: 3'b100 
+	Parameter C_DATA_PATTERN_ALL_0 bound to: 3'b101 
+	Parameter C_DATA_PATTERN_A5A5 bound to: 3'b110 
+	Parameter C_STRB_PATTERN_DEFAULT bound to: 3'b001 
+	Parameter C_STRB_PATTERN_WALKING1 bound to: 3'b010 
+	Parameter C_STRB_PATTERN_WALKING0 bound to: 3'b011 
+	Parameter TCQ bound to: 0 - type: integer 
+	Parameter C_WSTRB_WIDTH_LOG2 bound to: 3 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'prbs_data_gen' [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_data_gen.sv:391]
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_DATA_PATTERN_PRBS bound to: 3'b001 
+	Parameter C_DATA_PATTERN_WALKING0 bound to: 3'b010 
+	Parameter C_DATA_PATTERN_WALKING1 bound to: 3'b011 
+	Parameter C_DATA_PATTERN_ALL_F bound to: 3'b100 
+	Parameter C_DATA_PATTERN_ALL_0 bound to: 3'b101 
+	Parameter C_DATA_PATTERN_A5A5 bound to: 3'b110 
+	Parameter TCQ bound to: 0 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_data_gen.sv:414]
+INFO: [Synth 8-256] done synthesizing module 'prbs_data_gen' (7#1) [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_data_gen.sv:391]
+INFO: [Synth 8-226] default block is never used [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_data_gen.sv:146]
+INFO: [Synth 8-226] default block is never used [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_data_gen.sv:168]
+INFO: [Synth 8-226] default block is never used [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_data_gen.sv:184]
+INFO: [Synth 8-226] default block is never used [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_data_gen.sv:215]
+INFO: [Synth 8-226] default block is never used [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_data_gen.sv:229]
+INFO: [Synth 8-256] done synthesizing module 'ddr4_v2_2_3_data_gen' (8#1) [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_data_gen.sv:71]
+INFO: [Synth 8-638] synthesizing module 'ddr4_v2_2_3_data_chk' [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_data_chk.sv:67]
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_DATA_PATTERN_PRBS bound to: 3'b001 
+	Parameter C_DATA_PATTERN_WALKING0 bound to: 3'b010 
+	Parameter C_DATA_PATTERN_WALKING1 bound to: 3'b011 
+	Parameter C_DATA_PATTERN_ALL_F bound to: 3'b100 
+	Parameter C_DATA_PATTERN_ALL_0 bound to: 3'b101 
+	Parameter C_DATA_PATTERN_A5A5 bound to: 3'b110 
+	Parameter C_STRB_PATTERN_DEFAULT bound to: 3'b001 
+	Parameter C_STRB_PATTERN_WALKING1 bound to: 3'b010 
+	Parameter C_STRB_PATTERN_WALKING0 bound to: 3'b011 
+	Parameter TCQ bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ddr4_v2_2_3_data_chk' (9#1) [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_data_chk.sv:67]
+WARNING: [Synth 8-6014] Unused sequential element strb_pattern_wr_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_wrapper.sv:219]
+WARNING: [Synth 8-6014] Unused sequential element strb_pattern_rd_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_wrapper.sv:365]
+INFO: [Synth 8-4471] merging register 'axi_rready_reg' into 'axi_bready_reg' [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_wrapper.sv:408]
+WARNING: [Synth 8-6014] Unused sequential element axi_rready_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_wrapper.sv:408]
+INFO: [Synth 8-256] done synthesizing module 'ddr4_v2_2_3_axi_wrapper' (10#1) [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_wrapper.sv:70]
+INFO: [Synth 8-256] done synthesizing module 'ddr4_v2_2_3_axi_opcode_gen' (11#1) [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_opcode_gen.sv:67]
+WARNING: [Synth 8-6014] Unused sequential element watch_dog_rst_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_tg_top.sv:474]
+WARNING: [Synth 8-6014] Unused sequential element watch_dog_cnt_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_tg_top.sv:479]
+INFO: [Synth 8-256] done synthesizing module 'ddr4_v2_2_3_axi_tg_top' (12#1) [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_tg_top.sv:69]
+INFO: [Synth 8-256] done synthesizing module 'example_top' (13#1) [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/example_top.sv:86]
+WARNING: [Synth 8-3331] design ddr4_v2_2_3_axi_wrapper has unconnected port axi_bid[3]
+WARNING: [Synth 8-3331] design ddr4_v2_2_3_axi_wrapper has unconnected port axi_bid[2]
+WARNING: [Synth 8-3331] design ddr4_v2_2_3_axi_wrapper has unconnected port axi_bid[1]
+WARNING: [Synth 8-3331] design ddr4_v2_2_3_axi_wrapper has unconnected port axi_bid[0]
+WARNING: [Synth 8-3331] design ddr4_v2_2_3_axi_wrapper has unconnected port axi_bresp[0]
+WARNING: [Synth 8-3331] design ddr4_v2_2_3_axi_wrapper has unconnected port axi_rid[3]
+WARNING: [Synth 8-3331] design ddr4_v2_2_3_axi_wrapper has unconnected port axi_rid[2]
+WARNING: [Synth 8-3331] design ddr4_v2_2_3_axi_wrapper has unconnected port axi_rid[1]
+WARNING: [Synth 8-3331] design ddr4_v2_2_3_axi_wrapper has unconnected port axi_rid[0]
+WARNING: [Synth 8-3331] design ddr4_v2_2_3_axi_wrapper has unconnected port axi_rresp[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 500.305 ; gain = 137.328
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 500.305 ; gain = 137.328
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-i
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc] for cell 'u_ddr4_0'
+Finished Parsing XDC File [e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc] for cell 'u_ddr4_0'
+Parsing XDC File [e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/example_design.xdc]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -hier -filter {NAME =~ */u_ddr4_infrastructure/gen_mmcme3.u_mmcme_adv_inst/CLKIN1}'. [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/example_design.xdc:142]
+Finished Parsing XDC File [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/example_design.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/example_design.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/example_top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/example_design.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/example_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/example_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  BUFG => BUFGCE: 1 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1090.027 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1090.027 ; gain = 727.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku040-ffva1156-2-i
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1090.027 ; gain = 727.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_act_n. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_act_n. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[10]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[10]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[11]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[11]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[12]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[12]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[13]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[13]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[14]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[14]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[15]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[15]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[16]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 17).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[16]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 18).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[1]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 19).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[1]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 20).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[2]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 21).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[2]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 22).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[3]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 23).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[3]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 24).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[4]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 25).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[4]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 26).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[5]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 27).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[5]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 28).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[6]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 29).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[6]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 30).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[7]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 31).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[7]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 32).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[8]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 33).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[8]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 34).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[9]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 35).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[9]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 36).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_ba[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 37).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_ba[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 38).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_ba[1]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 39).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_ba[1]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 40).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_bg[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 41).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_bg[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 42).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_ck_c[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 43).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_ck_c[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 44).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_ck_t[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 45).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_ck_t[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 46).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_cke[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 47).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_cke[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 48).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_cs_n[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 49).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_cs_n[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 50).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 51).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 52).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[1]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 53).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[1]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 54).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[2]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 55).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[2]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 56).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[3]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 57).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[3]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 58).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[4]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 59).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[4]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 60).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[5]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 61).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[5]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 62).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[6]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 63).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[6]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 64).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[7]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 65).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[7]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 66).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 67).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 68).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[10]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 69).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[10]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 70).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[11]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 71).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[11]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 72).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[12]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 73).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[12]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 74).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[13]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 75).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[13]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 76).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[14]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 77).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[14]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 78).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[15]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 79).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[15]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 80).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[16]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 81).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[16]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 82).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[17]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 83).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[17]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 84).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[18]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 85).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[18]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 86).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[19]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 87).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[19]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 88).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[1]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 89).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[1]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 90).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[20]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 91).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[20]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 92).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[21]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 93).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[21]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 94).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[22]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 95).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[22]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 96).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[23]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 97).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[23]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 98).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[24]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 99).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[24]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 100).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[25]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 101).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[25]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 102).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[26]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 103).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[26]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 104).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[27]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 105).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[27]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 106).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[28]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 107).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[28]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 108).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[29]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 109).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[29]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 110).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[2]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 111).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[2]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 112).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[30]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 113).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[30]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 114).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[31]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 115).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[31]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 116).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[32]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 117).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[32]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 118).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[33]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 119).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[33]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 120).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[34]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 121).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[34]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 122).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[35]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 123).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[35]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 124).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[36]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 125).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[36]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 126).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[37]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 127).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[37]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 128).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[38]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 129).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[38]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 130).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[39]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 131).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[39]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 132).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[3]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 133).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[3]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 134).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[40]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 135).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[40]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 136).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[41]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 137).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[41]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 138).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[42]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 139).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[42]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 140).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[43]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 141).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[43]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 142).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[44]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 143).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[44]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 144).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[45]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 145).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[45]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 146).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[46]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 147).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[46]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 148).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[47]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 149).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[47]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 150).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[48]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 151).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[48]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 152).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[49]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 153).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[49]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 154).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[4]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 155).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[4]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 156).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[50]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 157).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[50]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 158).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[51]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 159).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[51]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 160).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[52]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 161).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[52]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 162).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[53]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 163).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[53]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 164).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[54]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 165).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[54]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 166).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[55]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 167).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[55]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 168).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[56]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 169).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[56]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 170).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[57]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 171).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[57]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 172).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[58]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 173).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[58]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 174).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[59]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 175).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[59]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 176).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[5]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 177).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[5]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 178).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[60]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 179).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[60]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 180).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[61]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 181).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[61]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 182).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[62]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 183).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[62]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 184).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[63]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 185).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[63]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 186).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[6]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 187).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[6]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 188).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[7]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 189).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[7]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 190).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[8]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 191).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[8]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 192).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[9]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 193).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[9]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 194).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 195).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 196).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[1]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 197).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[1]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 198).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[2]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 199).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[2]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 200).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[3]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 201).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[3]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 202).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[4]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 203).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[4]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 204).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[5]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 205).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[5]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 206).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[6]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 207).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[6]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 208).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[7]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 209).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[7]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 210).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 211).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 212).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[1]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 213).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[1]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 214).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[2]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 215).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[2]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 216).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[3]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 217).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[3]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 218).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[4]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 219).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[4]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 220).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[5]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 221).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[5]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 222).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[6]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 223).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[6]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 224).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[7]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 225).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[7]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 226).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_odt[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 227).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_odt[0]. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 228).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_reset_n. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 229).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_reset_n. (constraint file  e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/.Xil/Vivado-17124-DESKTOP-C3F5G4E/dcp1/ddr4_0_in_context.xdc, line 230).
+Applied set_property DONT_TOUCH = true for u_ddr4_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1090.027 ; gain = 727.051
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element instr_pointer_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_boot_mode_gen.sv:174]
+WARNING: [Synth 8-6014] Unused sequential element axi_addr_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_boot_mode_gen.sv:279]
+INFO: [Synth 8-5544] ROM "prbs_mode_instr_axi_burst" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "prbs_mode_instr_axi_strb_pattern" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element prbs_instr_count_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_prbs_mode_gen.sv:135]
+WARNING: [Synth 8-6014] Unused sequential element instr_pointer_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_custom_mode_gen.sv:138]
+WARNING: [Synth 8-6014] Unused sequential element strb_walking_pattern_additional_shift_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_data_gen.sv:293]
+WARNING: [Synth 8-6014] Unused sequential element data_beat_count_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_data_chk.sv:176]
+INFO: [Synth 8-4471] merging register 'axi_arlock_reg' into 'axi_awlock_reg' [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_wrapper.sv:360]
+INFO: [Synth 8-4471] merging register 'axi_arcache_reg[3:0]' into 'axi_awcache_reg[3:0]' [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_wrapper.sv:361]
+INFO: [Synth 8-4471] merging register 'axi_arprot_reg[2:0]' into 'axi_awprot_reg[2:0]' [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_wrapper.sv:362]
+WARNING: [Synth 8-6014] Unused sequential element axi_arlock_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_wrapper.sv:360]
+WARNING: [Synth 8-6014] Unused sequential element axi_arcache_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_wrapper.sv:361]
+WARNING: [Synth 8-6014] Unused sequential element axi_arprot_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_wrapper.sv:362]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_wrapper.sv:291]
+WARNING: [Synth 8-6014] Unused sequential element awid_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_wrapper.sv:217]
+WARNING: [Synth 8-6014] Unused sequential element wlen_count_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_wrapper.sv:284]
+WARNING: [Synth 8-6014] Unused sequential element arid_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_wrapper.sv:363]
+INFO: [Synth 8-802] inferred FSM for state register 'tg_opcode_gen_sm_ps_reg' in module 'ddr4_v2_2_3_axi_opcode_gen'
+INFO: [Synth 8-5546] ROM "instr_axi_addr_is_aligned" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "tg_opcode_gen_sm_ps" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tg_opcode_gen_sm_ps" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+      TG_OPCODE_GEN_IDLE |                              000 |                             0000
+      TG_OPCODE_GEN_LOAD |                              001 |                             0001
+TG_OPCODE_GEN_WRITE_A5A5_ALIGNED_ADDR |                              010 |                             0100
+TG_OPCODE_GEN_WRITE_SIMPLE |                              011 |                             0010
+TG_OPCODE_GEN_READ_SIMPLE |                              100 |                             0101
+   TG_OPCODE_GEN_READ_BG |                              101 |                             0110
+      TG_OPCODE_GEN_DONE |                              110 |                             0111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'tg_opcode_gen_sm_ps_reg' using encoding 'sequential' in module 'ddr4_v2_2_3_axi_opcode_gen'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1090.027 ; gain = 727.051
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 6     
+	   2 Input      9 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 4     
+	   2 Input      7 Bit       Adders := 8     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 4     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input     64 Bit         XORs := 3     
+	   2 Input      1 Bit         XORs := 15    
++---Registers : 
+	              128 Bit    Registers := 8     
+	               64 Bit    Registers := 26    
+	               32 Bit    Registers := 17    
+	                9 Bit    Registers := 4     
+	                8 Bit    Registers := 17    
+	                7 Bit    Registers := 10    
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 8     
+	                3 Bit    Registers := 11    
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 62    
++---Multipliers : 
+	                 8x32  Multipliers := 1     
++---Muxes : 
+	   8 Input    128 Bit        Muxes := 4     
+	   3 Input    128 Bit        Muxes := 2     
+	   2 Input    128 Bit        Muxes := 2     
+	   6 Input     70 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 4     
+	   8 Input     57 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 23    
+	   7 Input     32 Bit        Muxes := 4     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 18    
+	   8 Input      8 Bit        Muxes := 2     
+	   8 Input      7 Bit        Muxes := 4     
+	   2 Input      7 Bit        Muxes := 6     
+	   2 Input      4 Bit        Muxes := 2     
+	   6 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 20    
+	  10 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 14    
+	   2 Input      1 Bit        Muxes := 72    
+	   6 Input      1 Bit        Muxes := 12    
+	   4 Input      1 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 15    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module example_top 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module ddr4_v2_2_3_boot_mode_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Multipliers : 
+	                 8x32  Multipliers := 1     
++---Muxes : 
+	   6 Input     70 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 21    
+	   6 Input      1 Bit        Muxes := 12    
+Module ddr4_v2_2_3_prbs_mode_gen 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 5     
+Module ddr4_v2_2_3_custom_mode_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   8 Input     57 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+Module prbs_data_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               32 Bit    Registers := 3     
++---Muxes : 
+	   7 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+Module ddr4_v2_2_3_data_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 4     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 4     
+	                8 Bit    Registers := 4     
+	                7 Bit    Registers := 5     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   8 Input    128 Bit        Muxes := 2     
+	   3 Input    128 Bit        Muxes := 1     
+	   2 Input    128 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   8 Input      7 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 9     
+	   4 Input      1 Bit        Muxes := 1     
+Module ddr4_v2_2_3_data_chk 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---XORs : 
+	   2 Input     64 Bit         XORs := 3     
++---Registers : 
+	               64 Bit    Registers := 22    
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+Module ddr4_v2_2_3_axi_wrapper 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 6     
+	                3 Bit    Registers := 6     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 13    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module ddr4_v2_2_3_axi_opcode_gen 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	   2 Input      8 Bit        Muxes := 6     
+	  10 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 11    
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 7     
+	   7 Input      1 Bit        Muxes := 15    
+Module ddr4_v2_2_3_axi_tg_top 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 3     
+	               32 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 6     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1920 (col length:120)
+BRAMs: 1200 (col length: RAMB18 120 RAMB36 60)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element instr_pointer_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_boot_mode_gen.sv:174]
+WARNING: [Synth 8-6014] Unused sequential element axi_addr_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_boot_mode_gen.sv:279]
+WARNING: [Synth 8-6014] Unused sequential element prbs_instr_count_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_prbs_mode_gen.sv:135]
+WARNING: [Synth 8-6014] Unused sequential element instr_pointer_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_custom_mode_gen.sv:138]
+WARNING: [Synth 8-3936] Found unconnected internal register 'first_beat_shift_by_reg' and it is trimmed from '7' to '3' bits. [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_data_gen.sv:230]
+WARNING: [Synth 8-6014] Unused sequential element strb_walking_pattern_additional_shift_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_data_gen.sv:293]
+WARNING: [Synth 8-6014] Unused sequential element strb_walking_pattern_additional_shift_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_data_gen.sv:293]
+INFO: [Synth 8-5546] ROM "instr_axi_addr_is_aligned" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element u_axi_wrapper/u_data_chk/data_beat_count_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_data_chk.sv:176]
+WARNING: [Synth 8-6014] Unused sequential element u_axi_wrapper/awid_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_wrapper.sv:217]
+WARNING: [Synth 8-6014] Unused sequential element u_axi_wrapper/wlen_count_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_wrapper.sv:284]
+WARNING: [Synth 8-6014] Unused sequential element u_axi_wrapper/arid_reg was removed.  [e:/ax/ku040/13_ddr_test/ddr4_0_ex/imports/ddr4_v2_2_axi_wrapper.sv:363]
+WARNING: [Synth 8-3331] design ddr4_v2_2_3_axi_opcode_gen has unconnected port axi_bid[3]
+WARNING: [Synth 8-3331] design ddr4_v2_2_3_axi_opcode_gen has unconnected port axi_bid[2]
+WARNING: [Synth 8-3331] design ddr4_v2_2_3_axi_opcode_gen has unconnected port axi_bid[1]
+WARNING: [Synth 8-3331] design ddr4_v2_2_3_axi_opcode_gen has unconnected port axi_bid[0]
+WARNING: [Synth 8-3331] design ddr4_v2_2_3_axi_opcode_gen has unconnected port axi_bresp[0]
+WARNING: [Synth 8-3331] design ddr4_v2_2_3_axi_opcode_gen has unconnected port axi_rid[3]
+WARNING: [Synth 8-3331] design ddr4_v2_2_3_axi_opcode_gen has unconnected port axi_rid[2]
+WARNING: [Synth 8-3331] design ddr4_v2_2_3_axi_opcode_gen has unconnected port axi_rid[1]
+WARNING: [Synth 8-3331] design ddr4_v2_2_3_axi_opcode_gen has unconnected port axi_rid[0]
+WARNING: [Synth 8-3331] design ddr4_v2_2_3_axi_opcode_gen has unconnected port axi_rresp[0]
+INFO: [Synth 8-3886] merging instance 'u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen/u_axi_wrapper/data_pattern_rd_reg[1]' (FDRE) to 'u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen/u_axi_wrapper/data_pattern_rd_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/data_pattern_rd_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[61] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[63] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[62] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[57] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[58] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[59] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[60] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[51] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[52] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[49] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[50] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[55] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[56] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[53] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[54] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[31] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[24] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[26] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[18] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[16] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[17] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[23] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[14] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[12] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[13] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[9] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[11] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[39] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[40] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[38] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[33] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[36] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[47] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[48] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[45] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[46] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[41] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[42] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[43] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/data_o_bg_r_reg[44] )
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[0]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_default_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[127]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[126]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[125]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[124]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[123]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[122]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[121]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[120]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[119]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[118]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[117]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[116]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[115]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[114]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[113]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[112]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[111]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[110]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[109]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[108]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[107]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[106]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[105]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[104]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[103]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[102]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[101]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[100]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[99]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[98]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[97]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[96]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[95]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[94]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[93]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[92]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[91]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[90]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[89]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[88]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[87]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[86]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[85]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[84]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[83]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[82]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[81]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[80]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[79]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[78]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[77]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[76]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[75]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[74]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[73]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[72]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[71]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[70]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[69]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[68]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[67]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[66]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[65]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[64]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[63]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[62]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[61]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[60]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[59]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[58]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[57]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[56]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[55]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[54]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[53]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[52]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[51]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[50]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[49]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[48]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[47]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[46]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[45]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[44]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[43]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[42]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[41]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[40]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[39]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[38]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[37]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[36]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[35]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[34]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[33]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[32]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[31]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking1_reg[30]' (FD) to 'ddr4_v2_2_3_data_gen:/wstrb_initial_walking0_reg[0]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ddr4_v2_2_3_data_gen:/\wstrb_initial_walking1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_boot_mode_gen/length_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_custom_mode_gen/custom_mode_stop_asserted_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_mode_stop_asserted_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_boot_mode_gen/tg_instr_sm_ps_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_boot_mode_gen/boot_mode_stop_asserted_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/vio_axi_tg_custom_mode_running_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\instr_axi_strb_pattern_r_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/axi_awcache_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[61] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[58] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[50] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[55] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[56] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[53] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen /\u_axi_wrapper/u_data_chk/expected_data_bg_reg[35] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_boot_mode_gen/boot_mode_stop_asserted_reg) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_boot_mode_gen/instr_pointer_reg[5]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_boot_mode_gen/instr_pointer_reg[4]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_boot_mode_gen/instr_pointer_reg[3]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_boot_mode_gen/tg_instr_sm_ps_reg[3]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_mode_stop_asserted_reg) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[0]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[1]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[2]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[3]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[4]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[5]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[6]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[7]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[8]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[9]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[10]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[11]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[12]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[13]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[14]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[15]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[16]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[17]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[18]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[19]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[20]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[21]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[22]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[23]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[24]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[25]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[26]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[27]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[28]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[29]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[30]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/prbs_instr_count_reg[31]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_custom_mode_gen/instr_pointer_reg[7]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_custom_mode_gen/instr_pointer_reg[6]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_custom_mode_gen/instr_pointer_reg[5]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_custom_mode_gen/instr_pointer_reg[4]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_custom_mode_gen/instr_pointer_reg[3]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_custom_mode_gen/instr_pointer_reg[2]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_custom_mode_gen/instr_pointer_reg[1]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_custom_mode_gen/instr_pointer_reg[0]) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_custom_mode_gen/custom_mode_stop_asserted_reg) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_custom_mode_gen/custom_mode_running_reg) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (u_ddr4_v2_2_3_axi_tg_top/u_custom_mode_gen/opcode_gen_start_reg) is unused and will be removed from module example_top.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[127]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[126]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[125]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[124]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[123]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[122]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[121]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[120]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[119]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[118]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[117]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[116]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[115]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[114]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[113]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[112]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[111]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[110]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[109]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[108]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[107]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[106]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[105]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[104]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[103]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[102]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[101]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[100]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[99]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[98]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[97]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[96]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[95]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[94]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[93]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[92]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[91]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[90]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[89]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[88]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[87]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[86]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[85]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[84]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[83]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[82]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[81]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[80]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[79]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[78]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+WARNING: [Synth 8-3332] Sequential element (wstrb_initial_default_reg[77]) is unused and will be removed from module ddr4_v2_2_3_data_gen.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1090.027 ; gain = 727.051
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1330.598 ; gain = 967.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1332.711 ; gain = 969.734
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1368.555 ; gain = 1005.578
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1368.555 ; gain = 1005.578
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1368.555 ; gain = 1005.578
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1368.555 ; gain = 1005.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1368.555 ; gain = 1005.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1368.555 ; gain = 1005.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1368.555 ; gain = 1005.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+-----------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                                                | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-----------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|example_top | u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen/u_axi_wrapper/u_data_chk/compare_wr_rd_4r_reg | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|example_top | u_ddr4_v2_2_3_axi_tg_top/u_axi_opcode_gen/u_axi_wrapper/u_data_chk/rdata_vld_4r_reg     | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|example_top | u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/lfsr_q_reg[60]                                 | 10     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|example_top | u_ddr4_v2_2_3_axi_tg_top/u_prbs_mode_gen/lfsr_q_reg[36]                                 | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++------------+-----------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |ddr4_0        |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |ddr4_0 |     1|
+|2     |BUFG   |     1|
+|3     |CARRY8 |    10|
+|4     |LUT1   |    18|
+|5     |LUT2   |   201|
+|6     |LUT3   |   212|
+|7     |LUT4   |   102|
+|8     |LUT5   |   175|
+|9     |LUT6   |   305|
+|10    |SRL16E |     4|
+|11    |FDRE   |  1036|
+|12    |FDSE   |    17|
+|13    |IBUF   |     1|
+|14    |IBUFDS |     1|
+|15    |OBUF   |     2|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------------------------------------------+---------------------------+------+
+|      |Instance                                       |Module                     |Cells |
++------+-----------------------------------------------+---------------------------+------+
+|1     |top                                            |                           |  2710|
+|2     |  u_ddr4_v2_2_3_axi_tg_top                     |ddr4_v2_2_3_axi_tg_top     |  2077|
+|3     |    u_axi_opcode_gen                           |ddr4_v2_2_3_axi_opcode_gen |  1745|
+|4     |      u_axi_wrapper                            |ddr4_v2_2_3_axi_wrapper    |  1679|
+|5     |        u_data_chk                             |ddr4_v2_2_3_data_chk       |  1022|
+|6     |          u_data_gen                           |ddr4_v2_2_3_data_gen_1     |   390|
+|7     |            \prbs_data_gen[0].u_prbs_data_gen  |prbs_data_gen_2            |    68|
+|8     |            \prbs_data_gen[1].u_prbs_data_gen  |prbs_data_gen_3            |    73|
+|9     |        u_data_gen                             |ddr4_v2_2_3_data_gen       |   389|
+|10    |          \prbs_data_gen[0].u_prbs_data_gen    |prbs_data_gen              |    98|
+|11    |          \prbs_data_gen[1].u_prbs_data_gen    |prbs_data_gen_0            |   105|
+|12    |    u_boot_mode_gen                            |ddr4_v2_2_3_boot_mode_gen  |   222|
+|13    |    u_prbs_mode_gen                            |ddr4_v2_2_3_prbs_mode_gen  |    92|
++------+-----------------------------------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1368.555 ; gain = 1005.578
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1926 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1368.555 ; gain = 415.855
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1368.555 ; gain = 1005.578
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  BUFG => BUFGCE: 1 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+272 Infos, 153 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 1376.895 ; gain = 1013.918
+INFO: [Common 17-1381] The checkpoint 'e:/ax/ku040/13_ddr_test/ddr4_0_ex/ddr4_0_ex.runs/synth_1/example_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file example_top_utilization_synth.rpt -pb example_top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.130 . Memory (MB): peak = 1376.895 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 25 14:30:17 2021...

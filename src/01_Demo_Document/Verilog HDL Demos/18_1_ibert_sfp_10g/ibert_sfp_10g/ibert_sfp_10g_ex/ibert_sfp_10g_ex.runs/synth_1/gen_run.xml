@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xcku040-ffva1156-2-i" LaunchTime="1619320007">
+  <File Type="PA-TCL" Name="example_ibert_sfp_10g.tcl"/>
+  <File Type="REPORTS-TCL" Name="example_ibert_sfp_10g_reports.tcl"/>
+  <File Type="RDS-RDS" Name="example_ibert_sfp_10g.vds"/>
+  <File Type="RDS-UTIL" Name="example_ibert_sfp_10g_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="example_ibert_sfp_10g_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="example_ibert_sfp_10g.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/ibert_sfp_10g/ibert_sfp_10g.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../project_1/project_1.srcs/sources_1/ip/ibert_sfp_10g/ibert_sfp_10g.xci"/>
+        <Attr Name="ImportTime" Val="1619318518"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/imports/example_ibert_sfp_10g.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/imports/example_top_verilog.txt"/>
+    <File Path="$PPRDIR/imports/ibert_ultrascale_gth_example_top.txt"/>
+    <File Path="$PPRDIR/imports/ibert_ultrascale_gth_ip_example.txt"/>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="example_ibert_sfp_10g"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/imports/example_ibert_sfp_10g.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/imports/ibert_ultrascale_gth_ip_example.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/constrs_1/new/sfp.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

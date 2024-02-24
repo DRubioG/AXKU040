@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xcku040-ffva1156-2-i" LaunchTime="1626402069">
+  <File Type="PA-TCL" Name="key_debounce.tcl"/>
+  <File Type="REPORTS-TCL" Name="key_debounce_reports.tcl"/>
+  <File Type="RDS-RDS" Name="key_debounce.vds"/>
+  <File Type="RDS-UTIL" Name="key_debounce_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="key_debounce_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="key_debounce.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/src/ax_debounce.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../AX7325_CD_20201209/demo/05_key_debounce/key_debounce/src/ax_debounce.v"/>
+        <Attr Name="ImportTime" Val="1500957167"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/count_m10.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../AX7325_CD_20201209/demo/05_key_debounce/key_debounce/src/count_m10.v"/>
+        <Attr Name="ImportTime" Val="1502076568"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/key_debounce.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../AX7325_CD_20201209/demo/05_key_debounce/key_debounce/src/key_debounce.v"/>
+        <Attr Name="ImportTime" Val="1510205090"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="key_debounce"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../../AX7325_CD_20201209/demo/05_key_debounce/key_debounce/constrs_1/new/key.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

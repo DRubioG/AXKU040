@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Apr 14 14:59:49 2021
+# Process ID: 63764
+# Current directory: D:/xilinx_fpga/ku040/eth_logic_ku040_full
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25776 D:\xilinx_fpga\ku040\eth_logic_ku040_full\eth_test.xpr
+# Log file: D:/xilinx_fpga/ku040/eth_logic_ku040_full/vivado.log
+# Journal file: D:/xilinx_fpga/ku040/eth_logic_ku040_full\vivado.jou
+#-----------------------------------------------------------
+start_gui
